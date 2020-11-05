@@ -8,8 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.6",
     "next": "10.0.1",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "tailwindcss": "^1.9.6"
   }
 }
