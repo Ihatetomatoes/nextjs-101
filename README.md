@@ -1,4 +1,18 @@
+# Next.js site with TailwindCSS and MDX
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## What's included
+
+- Next.js - the core
+- TailwindCSS - styling
+- MDX - markdown files as data source
+
+## Ideal image sizes
+
+- Course cover image - `417 × 464`
+- Unit cover image - `837 × 305`
+
 
 ## Getting Started
 
