@@ -4,7 +4,7 @@ import { Header, Layout, Sidebar, UnitCard } from "../../components";
 
 const Unit = ({ unit, allUnits }) => (
   <Layout>
-    <main className="bg-white border-r border-l p-4 sm:p-8 border-gray-200 min-h-full col-span-8 col-start-2">
+    <main className="bg-white p-4 sm:p-8 border-gray-200 min-h-full col-span-8 col-start-2">
       <Header />
       <UnitCard unit={unit} />
       <div

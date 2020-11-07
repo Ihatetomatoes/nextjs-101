@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
 import { getAllPosts } from "../../lib/api";
-import { Header, Hero, Layout, UnitCard } from "../components";
+import { Header, Hero, Layout, Unit } from "../components";
 import { author, siteName } from "../components/Meta";
 
 export default function Home({ allPosts }) {
@@ -14,17 +13,13 @@ export default function Home({ allPosts }) {
       <main className="bg-white p-4 sm:p-8 min-h-full col-span-8 col-start-2">
         <Header />
         <Hero />
-        {allPosts &&
-          allPosts.map((unit) => {
-            const { slug } = unit;
-            return (
-              <Link key={slug} href={`post/${slug}`}>
-                <a href={`post/${slug}`}>
-                  <UnitCard key={slug} unit={unit} />
-                </a>
-              </Link>
-            );
-          })}
+        {allPosts && (
+          <ul>
+            {allPosts.map((unit) => (
+              <Unit unit={unit} />
+            ))}
+          </ul>
+        )}
         {/* <Author /> */}
       </main>
     </Layout>

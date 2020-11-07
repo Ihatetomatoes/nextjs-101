@@ -5,22 +5,32 @@ import React from "react";
 
 const Sidebar = ({ posts, router: { query } }) => {
   return (
-    <div className="col-span-3 md:pt-4">
-      <ul className="sticky top-0 p-4">
-        {posts.map(({ title, slug }) => {
-          const linkClass = classNames({
-            "py-1 px-2 block rounded-sm": true,
-            "bg-gray-400 text-white": slug === query.slug,
-          });
-          return (
-            <li key={slug} className="text-sm">
-              <Link href={`/post/${slug}`}>
-                <a className={linkClass}>{title}</a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="col-span-3">
+      <div className="sticky top-0 md:p-4">
+        <Link href="/">
+          <a className="bold py-2 px-4 w-full inline-block text-center bg-gray-200 hover:bg-red-500 transition-colors duration-200 my-4 text-white rounded-md">
+            ← Back to Overview
+          </a>
+        </Link>
+        <div className="bg-white border p-4 md:p-0 mb-4 border-gray-200 md:border-0 md:bg-transparent">
+          <h2 className="text-xl font-bold mb-2">All Units</h2>
+          <ul>
+            {posts.map(({ title, slug }) => {
+              const linkClass = classNames({
+                "py-1 px-2 block rounded-sm": true,
+                "bg-gray-400 text-white": slug === query.slug,
+              });
+              return (
+                <li key={slug} className="text-sm">
+                  <Link href={`/post/${slug}`}>
+                    <a className={linkClass}>{title}</a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
