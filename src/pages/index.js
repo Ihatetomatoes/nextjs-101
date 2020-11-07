@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { getAllPosts } from "../../lib/api";
-import { Author, Header, Hero, Layout, Unit } from "../components";
+import { Author, Header, Hero, Layout, Module, Unit } from "../components";
 import { author, siteName } from "../components/Meta";
 
 export default function Home({ allPosts }) {
@@ -14,11 +14,19 @@ export default function Home({ allPosts }) {
         <Header />
         <Hero />
         {allPosts && (
-          <ul>
-            {allPosts.map((unit) => (
-              <Unit key={unit.slug} unit={unit} />
-            ))}
-          </ul>
+          <ol className="mb-4">
+            {allPosts.map((unit, index) => {
+              const item = unit.module ? (
+                <>
+                  <Module module={unit.module} />
+                  <Unit key={unit.slug} index={index} unit={unit} />
+                </>
+              ) : (
+                <Unit key={unit.slug} index={index} unit={unit} />
+              );
+              return item;
+            })}
+          </ol>
         )}
         <Author />
       </main>
@@ -31,6 +39,7 @@ export async function getStaticProps() {
     "title",
     "slug",
     "module",
+    "order",
     "coverImage",
     "excerpt",
   ]);

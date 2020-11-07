@@ -30,7 +30,7 @@ export async function getStaticProps({ params }) {
   ]);
   const content = await markdownToHtml(unit.content || "");
 
-  const allUnits = getAllPosts(["title", "slug"]);
+  const allUnits = getAllPosts(["title", "slug", "module"]);
 
   return {
     props: {

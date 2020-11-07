@@ -1,9 +1,10 @@
 ---
-id: "3"
-title: '2. Static Generation'
+id: "2"
+order: 2
+title: 'Static Generation'
 excerpt: 'How to pre-render a page on the server'
 coverImage: ''
-module: 'Dynamic routes'
+module: ''
 date: '2020-03-16T05:35:07.322Z'
 ogImage:
   url: '/assets/course/working-with-images/img_introduction.jpg'

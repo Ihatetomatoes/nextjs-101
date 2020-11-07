@@ -1,6 +1,7 @@
 ---
 id: "1"
-title: '1. Introduction to Next.js'
+order: 1
+title: 'Introduction to Next.js'
 excerpt: 'Why to use Next.js for your next static site project.'
 coverImage: ''
 module: 'Introduction and Setup'

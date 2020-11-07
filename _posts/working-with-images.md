@@ -1,9 +1,10 @@
 ---
-id: "2"
-title: '3. Working with images'
+id: "3"
+order: 3
+title: 'Working with images'
 excerpt: 'How to reference images in your Next.js project'
 coverImage: ''
-module: 'Introduction and Setup'
+module: 'Manage Content'
 date: '2020-03-16T05:35:07.322Z'
 ogImage:
   url: '/assets/course/working-with-images/img_introduction.jpg'

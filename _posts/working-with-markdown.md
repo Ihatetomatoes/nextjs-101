@@ -1,9 +1,10 @@
 ---
 id: "4"
-title: '4. Working with Markdown'
+order: 4
+title: 'Working with Markdown'
 excerpt: 'How to convert markdown to HTML'
 coverImage: ''
-module: 'Introduction and Setup'
+module: ''
 date: '2020-03-16T05:35:07.322Z'
 ogImage:
   url: '/assets/course/working-with-images/img_introduction.jpg'

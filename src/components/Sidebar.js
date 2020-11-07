@@ -15,18 +15,28 @@ const Sidebar = ({ posts, router: { query } }) => {
         <div className="bg-white border p-4 md:p-0 mb-4 border-gray-200 md:border-0 md:bg-transparent">
           <h2 className="text-xl font-bold mb-2">All Units</h2>
           <ul>
-            {posts.map(({ title, slug }) => {
+            {posts.map(({ title, slug, module }) => {
               const linkClass = classNames({
-                "py-1 px-2 block rounded-sm": true,
+                "py-1 px-2 pl-4 block rounded-sm": true,
                 "bg-gray-400 text-white": slug === query.slug,
               });
-              return (
+              const item = module ? (
+                <ul key={slug}>
+                  <li className="text-sm font-bold py-1">{module}</li>
+                  <li className="text-sm">
+                    <Link href={`/post/${slug}`}>
+                      <a className={linkClass}>{title}</a>
+                    </Link>
+                  </li>
+                </ul>
+              ) : (
                 <li key={slug} className="text-sm">
                   <Link href={`/post/${slug}`}>
                     <a className={linkClass}>{title}</a>
                   </Link>
                 </li>
               );
+              return item;
             })}
           </ul>
         </div>
