@@ -15,7 +15,10 @@ const Hero = () => {
           <ul className="mb-6">
             {outcomes.map((i) => (
               <li key={i} className="text-gray-700 list-none flex mb-2">
-                <Tick className="mr-4" /> {i}
+                <span className="block">
+                  <Tick className="h-6 w-10 self-center" />
+                </span>
+                <span className="pl-1 opacity-75">{i}</span>
               </li>
             ))}
           </ul>

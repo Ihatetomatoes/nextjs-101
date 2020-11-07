@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { getAllPosts } from "../../lib/api";
-import { Header, Hero, Layout, Unit } from "../components";
+import { Author, Header, Hero, Layout, Unit } from "../components";
 import { author, siteName } from "../components/Meta";
 
 export default function Home({ allPosts }) {
@@ -16,11 +16,11 @@ export default function Home({ allPosts }) {
         {allPosts && (
           <ul>
             {allPosts.map((unit) => (
-              <Unit unit={unit} />
+              <Unit key={unit.slug} unit={unit} />
             ))}
           </ul>
         )}
-        {/* <Author /> */}
+        <Author />
       </main>
     </Layout>
   );

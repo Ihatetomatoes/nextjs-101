@@ -9,9 +9,9 @@ const Unit = ({ unit }) => {
           className="block p-4 hover:bg-gray-100 transition-colors duration-200"
           href={`post/${slug}`}
         >
-          <strong>{title}</strong>
+          <strong className="text-gray-400">{title}</strong>
           <br />
-          <span className="text-sm text-gray-400">{excerpt}</span>
+          <span className="text-sm text-gray-400 opacity-75">{excerpt}</span>
         </a>
       </Link>
     </li>
