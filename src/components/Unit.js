@@ -3,7 +3,7 @@ import Link from "next/link";
 const Unit = ({ unit }) => {
   const { slug, title, excerpt } = unit;
   return (
-    <li className="border border-gray-200 border-t-0 relative z-10">
+    <li className="border border-gray-200 border-t-0 relative z-10 last:border-b-0">
       <Link key={slug} href={`post/${slug}`}>
         <a
           className="block p-4 hover:bg-gray-100 transition-colors duration-200"

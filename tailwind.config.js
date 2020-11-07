@@ -48,6 +48,8 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    borderWidth: ["responsive, last"],
+  },
   plugins: [require("@tailwindcss/typography")],
 };
