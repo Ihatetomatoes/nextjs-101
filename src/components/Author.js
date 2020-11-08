@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { author, authorImg, authorTitle, shortBio } from "../components/Meta";
+import { SocialIcons } from "./";
 
 const Author = () => {
   return (
@@ -20,6 +21,7 @@ const Author = () => {
           <span className="uppercase text-gray-300 text-xs">{authorTitle}</span>
         </h3>
         <p className="text-sm text-gray-200 ">{shortBio}</p>
+        <SocialIcons />
       </div>
     </div>
   );

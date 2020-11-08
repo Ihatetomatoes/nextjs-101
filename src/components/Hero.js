@@ -3,6 +3,20 @@ import React from "react";
 import { Tick } from "../icons";
 import { coverImage, outcomes } from "./Meta";
 
+const StartBtn = () => (
+  <Link href="/post/introduction">
+    <a className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition duration-200">
+      Start Learning →
+    </a>
+  </Link>
+);
+
+const ComingSoonBadge = () => (
+  <span className="bg-blue-500 text-white py-2 px-4 rounded-md transition duration-200">
+    Coming Soon!
+  </span>
+);
+
 const Hero = () => {
   return (
     <div className="md:flex md:flex-row relative border border-gray-200">
@@ -23,11 +37,7 @@ const Hero = () => {
             ))}
           </ul>
         )}
-        <Link href="/post/introduction">
-          <a className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition duration-200">
-            Start Learning →
-          </a>
-        </Link>
+        <ComingSoonBadge />
       </div>
     </div>
   );

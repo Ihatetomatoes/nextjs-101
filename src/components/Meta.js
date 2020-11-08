@@ -13,3 +13,11 @@ export const outcomes = [
 ];
 export const logo = "/assets/img_logo.svg";
 export const coverImage = "/assets/img_nextjs-101-cover.png";
+
+export const social = {
+  twitter: "https://twitter.com/ihatetomatoes",
+  facebook: "https://www.facebook.com/ihatetomatoesblog",
+  twitch: "https://twitch.tv/iht_blog/",
+  youtube:
+    "https://www.youtube.com/channel/UC7O6CntQoAI-wYyJxYiqNUg?sub_confirmation=1",
+};

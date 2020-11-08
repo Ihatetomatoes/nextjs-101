@@ -10,6 +10,10 @@ module.exports = {
     extend: {
       colors: {
         primaryGray: "#f1f1f1",
+        twitter: "#55acee",
+        facebook: "#3b5998",
+        youtube: "#c4302b",
+        twitch: "#9146FF",
         gray: {
           50: "#F4F4F4",
           100: "#F9F9F9",
