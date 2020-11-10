@@ -1,3 +1,4 @@
+import fetch from "isomorphic-unfetch";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -14,6 +15,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const FORM_ID = process.env.CONVERTKIT_FORM_ID;
     const API_KEY = process.env.CONVERTKIT_API_KEY;
     const API_URL = process.env.CONVERTKIT_API_URL;
+
+    console.log({ FORM_ID, API_URL });
 
     // 5. The status of 'subscribed' is equivalent to a double opt-in.
     const data = { email, api_key: API_KEY };
