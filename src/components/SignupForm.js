@@ -1,37 +1,44 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
 
 const SignupForm = () => {
   const { register, errors, handleSubmit } = useForm();
 
-  const onSubmit = async ({ email }) => {
-    const res = await fetch("/api/subscribe", {
-      body: JSON.stringify({
-        email,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
+  //   const onSubmit = async ({ email }) => {
+  //     const res = await fetch("/api/subscribe", {
+  //       body: JSON.stringify({
+  //         email,
+  //       }),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       method: "POST",
+  //     });
 
-    const { error } = await res.json();
+  //     const { error } = await res.json();
 
-    if (error) {
-      console.log({ error });
-      return;
-    }
-  };
+  //     if (error) {
+  //       console.log({ error });
+  //       return;
+  //     }
+  //   };
+
+  const [mutate, { isLoading, isError, error }] = useMutation(({ email }) => {
+    return fetch(`/api/subscribe?email=${email}`);
+  });
+
+  const onSubmit = (data) => mutate(data);
 
   // todo: loading state
   // todo: success message
-  //   if (isLoading) {
-  //     return <p>Adding you to the list.</p>;
-  //   }
+  if (isLoading) {
+    return <p>Adding you to the list.</p>;
+  }
 
-  //   if (isError) {
-  //     return <p>{error}</p>;
-  //   }
+  if (isError) {
+    return <p>{error}</p>;
+  }
 
   return (
     <>
