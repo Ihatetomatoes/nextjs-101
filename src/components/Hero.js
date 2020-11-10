@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Tick } from "../icons";
 import { coverImage, outcomes } from "./Meta";
+import SignupForm from "./SignupForm";
 
 const StartBtn = () => (
   <Link href="/post/introduction">
@@ -37,7 +38,7 @@ const Hero = () => {
             ))}
           </ul>
         )}
-        <ComingSoonBadge />
+        <SignupForm />
       </div>
     </div>
   );
