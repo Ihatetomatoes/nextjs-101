@@ -3,7 +3,10 @@ import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 
 const subscribeEmail = async ({ email }) => {
-  const response = await fetch(`/api/subscribe?email=${email}`, {});
+  const response = await fetch(
+    `${window.location.origin}/api/subscribe?email=${email}`,
+    {}
+  );
   return response;
 };
 
