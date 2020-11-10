@@ -1,60 +1,37 @@
-import fetch from "isomorphic-unfetch";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useMutation } from "react-query";
 
 const SignupForm = () => {
   const { register, errors, handleSubmit } = useForm();
 
-  //   const subscribeEmail = async ({ email }) => {
-  //     const response = await fetch(`/api/subscribe?email=${email}`, {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       method: "POST",
-  //     });
-  //     return response;
-  //   };
-
-  //   const onSubmit = async (data) => {
-  //     try {
-  //       await fetch(`/api/subscribe?email=${email}`, {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         method: "POST",
-  //       });
-  //       // Todo was successfully created
-  //     } catch (error) {
-  //       // Uh oh, something went wrong
-  //     }
-  //   };
-
-  const [mutate, { isError, isLoading, error }] = useMutation((data) => {
-    return fetch("/api/subscribe", {
+  const onSubmit = async ({ email }) => {
+    const res = await fetch("/api/subscribe", {
       body: JSON.stringify({
-        email: data.email,
+        email,
       }),
       headers: {
         "Content-Type": "application/json",
       },
       method: "POST",
     });
-  });
 
-  const onSubmit = (data) => {
-    mutate(data);
+    const { error } = await res.json();
+
+    if (error) {
+      console.log({ error });
+      return;
+    }
   };
 
   // todo: loading state
   // todo: success message
-  if (isLoading) {
-    return <p>Adding you to the list.</p>;
-  }
+  //   if (isLoading) {
+  //     return <p>Adding you to the list.</p>;
+  //   }
 
-  if (isError) {
-    return <p>{error}</p>;
-  }
+  //   if (isError) {
+  //     return <p>{error}</p>;
+  //   }
 
   return (
     <>
