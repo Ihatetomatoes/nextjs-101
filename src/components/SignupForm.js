@@ -11,12 +11,16 @@ const SignupForm = () => {
     return response;
   };
 
-  const [mutate, { isLoading, isError, error }] = useMutation(
-    subscribeEmail,
-    {}
-  );
+  const [mutate, { isLoading, isError, error }] = useMutation(subscribeEmail);
 
-  const onSubmit = (data) => mutate(data);
+  const onSubmit = async (data) => {
+    try {
+      await mutate(data);
+      // Todo was successfully created
+    } catch (error) {
+      // Uh oh, something went wrong
+    }
+  };
 
   // todo: loading state
   // todo: success message
