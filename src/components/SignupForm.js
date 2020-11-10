@@ -3,13 +3,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 
-const subscribeEmail = async ({ email }) => {
-  const response = await fetch(`/api/subscribe?email=${email}`);
-  return response;
-};
-
 const SignupForm = () => {
   const { register, errors, handleSubmit } = useForm();
+
+  const subscribeEmail = async ({ email }) => {
+    const response = await fetch(`/api/subscribe?email=${email}`);
+    return response;
+  };
 
   const [mutate, { isLoading, isError, error }] = useMutation(
     subscribeEmail,
