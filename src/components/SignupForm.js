@@ -7,7 +7,10 @@ const SignupForm = () => {
 
   const onSubmit = async ({ email }) => {
     try {
-      await fetch(`/api/subscribe?email=${email}`, {
+      await fetch("/api/subscribe", {
+        body: JSON.stringify({
+          email,
+        }),
         headers: {
           "Content-Type": "application/json",
         },
