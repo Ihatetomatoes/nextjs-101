@@ -1,36 +1,34 @@
 import fetch from "isomorphic-unfetch";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useMutation } from "react-query";
 
 const SignupForm = () => {
   const { register, errors, handleSubmit } = useForm();
 
-  const subscribeEmail = async ({ email }) => {
-    const response = await fetch(`/api/subscribe?email=${email}`);
-    return response;
-  };
-
-  const [mutate, { isLoading, isError, error }] = useMutation(subscribeEmail);
-
-  const onSubmit = async (data) => {
+  const onSubmit = async ({ email }) => {
     try {
-      await mutate(data);
+      await fetch(`/api/subscribe?email=${email}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
       // Todo was successfully created
     } catch (error) {
+      console.log({ "errorrr:": error });
       // Uh oh, something went wrong
     }
   };
 
   // todo: loading state
   // todo: success message
-  if (isLoading) {
-    return <p>Adding you to the list.</p>;
-  }
+  //   if (isLoading) {
+  //     return <p>Adding you to the list.</p>;
+  //   }
 
-  if (isError) {
-    return <p>{error}</p>;
-  }
+  //   if (isError) {
+  //     return <p>{error}</p>;
+  //   }
 
   return (
     <>
