@@ -5,7 +5,11 @@ module.exports = {
     defaultLineHeights: true,
     standardFontWeights: true,
   },
-  purge: [],
+  purge: {
+    mode: "all", // because we are using the Typography plugin https://github.com/tailwindlabs/tailwindcss-typography#purging-unused-styles
+    content: ["./src/**/*.{js,jsx,ts,tsx}", "./src/pages/**/*.{ts,tsx,js,jsx}"],
+    //enabled: true, // enable to test purge locally
+  },
   theme: {
     extend: {
       colors: {
