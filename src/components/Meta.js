@@ -13,7 +13,8 @@ export const outcomes = [
 ];
 export const logo = "/assets/img_logo.svg";
 export const coverImage = "/assets/img_nextjs-101-cover.png";
-export const ogImage = "/assets/img_og-next-101.jpg";
+export const ogImage =
+  "https://ihatetomatoes-nextjs-101.vercel.app/assets/img_og-next-101.jpg";
 
 export const social = {
   twitter: "https://twitter.com/ihatetomatoes",
