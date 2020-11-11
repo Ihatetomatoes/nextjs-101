@@ -8,7 +8,7 @@ export const shortBio =
   "Petr is a passionate front-end developer who likes to build cool products and teach along the way.";
 export const outcomes = [
   "How to build this landing page with Next.js",
-  "Now to create API route, integrate with ConvertKit",
+  "How to create API endpoint and integrate with ConvertKit API",
   "How to use React Hook Form and TailwindCSS",
 ];
 export const logo = "/assets/img_logo.svg";
