@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { getAllPosts } from "../../lib/api";
 import { Author, Header, Hero, Layout } from "../components";
-import { author, siteName } from "../components/Meta";
+import { author, ogImage, siteName } from "../components/Meta";
 
 export default function Home({ allPosts }) {
   return (
@@ -9,6 +9,12 @@ export default function Home({ allPosts }) {
       <Head>
         <title>{`${siteName} by ${author}`}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          property="og:title"
+          content={`${siteName} by ${author}`}
+          key="title"
+        />
+        <meta property="og:image" content={ogImage} key="image" />
       </Head>
       <main className="bg-white p-4 sm:p-8 min-h-full col-span-8 col-start-2">
         <Header />

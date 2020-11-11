@@ -24,8 +24,8 @@ const Hero = () => {
       <div className="bg-gray-100 text-center md:w-1/3 flex">
         <img className="object-contain mx-auto" src={coverImage} />
       </div>
-      <div className="px-8 py-12 self-center md:w-2/3">
-        <h2 className="font-bold text-2xl mb-3">What you'll learn how to</h2>
+      <div className="px-4 md:px-8 py-6 self-center md:w-2/3">
+        <h2 className="font-bold text-2xl mb-3">What you'll learn</h2>
         {outcomes && (
           <ul className="mb-6">
             {outcomes.map((i) => (

@@ -7,12 +7,13 @@ export const authorImg = "/assets/author/img_petr-tichy-bio.png";
 export const shortBio =
   "Petr is a passionate front-end developer who likes to build cool products and teach along the way.";
 export const outcomes = [
-  "Build this landing page with Next.js",
-  "Create API route, integrate with ConvertKit",
-  "Use React Hook Form and TailwindCSS",
+  "How to build this landing page with Next.js",
+  "Now to create API route, integrate with ConvertKit",
+  "How to use React Hook Form and TailwindCSS",
 ];
 export const logo = "/assets/img_logo.svg";
 export const coverImage = "/assets/img_nextjs-101-cover.png";
+export const ogImage = "/assets/img_og-next-101.jpg";
 
 export const social = {
   twitter: "https://twitter.com/ihatetomatoes",

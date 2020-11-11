@@ -59,9 +59,8 @@ const SignupForm = () => {
 
   return (
     <>
-      <p className="p-2 pl-4">
-        Leave your email below, to be notified
-        <br /> when this course is ready.
+      <p className="p-1 mb-2">
+        Leave your email below, to be notified when this course is ready.
       </p>
       <form className="w-full max-w-sm" onSubmit={handleSubmit(onSubmit)}>
         <div className={formClass}>
