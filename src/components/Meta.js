@@ -1,15 +1,15 @@
 export const siteName = "Next.js 101 - Free Online Course";
 export const siteDescription =
-  "Learn how to build a simple static site with Next.js";
+  "Learn how to build a simple landing page with Next.js";
 export const author = "Petr Tichy";
 export const authorTitle = "Front-end Developer";
 export const authorImg = "/assets/author/img_petr-tichy-bio.png";
 export const shortBio =
   "Petr is a passionate front-end developer who likes to build cool products and teach along the way.";
 export const outcomes = [
-  "How to build a simple static site with Next.js",
-  "How to use MDX to manage the content",
-  "Deploy to Vercel and link your custom domain",
+  "Build this landing page with Next.js",
+  "Create API route, integrate with ConvertKit",
+  "Use React Hook Form and TailwindCSS",
 ];
 export const logo = "/assets/img_logo.svg";
 export const coverImage = "/assets/img_nextjs-101-cover.png";

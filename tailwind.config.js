@@ -14,6 +14,7 @@ module.exports = {
         facebook: "#3b5998",
         youtube: "#c4302b",
         twitch: "#9146FF",
+        success: "#587e0e",
         gray: {
           50: "#F4F4F4",
           100: "#F9F9F9",
@@ -55,6 +56,7 @@ module.exports = {
   },
   variants: {
     borderWidth: ["responsive, last"],
+    opacity: ["responsive", "hover", "focus", "disabled"],
   },
   plugins: [require("@tailwindcss/typography")],
 };
