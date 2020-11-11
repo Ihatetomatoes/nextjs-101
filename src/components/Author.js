@@ -12,6 +12,7 @@ const Author = () => {
           src={authorImg}
           width={382}
           height={382}
+          alt="Petr Tichy"
         />
       </div>
       <div className="px-8 pb-8 md:pt-8 md:pl-0 self-center">

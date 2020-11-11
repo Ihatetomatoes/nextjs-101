@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Tick } from "../icons";
-import { coverImage, outcomes } from "./Meta";
+import { coverImage, outcomes, siteName } from "./Meta";
 import SignupForm from "./SignupForm";
 
 const StartBtn = () => (
@@ -22,7 +22,11 @@ const Hero = () => {
   return (
     <div className="md:flex md:flex-row relative border border-gray-200">
       <div className="bg-gray-100 text-center md:w-1/3 flex">
-        <img className="object-contain mx-auto" src={coverImage} />
+        <img
+          className="object-contain mx-auto"
+          alt={siteName}
+          src={coverImage}
+        />
       </div>
       <div className="px-4 md:px-8 py-6 self-center md:w-2/3">
         <h2 className="font-bold text-2xl mb-3">What you'll learn</h2>

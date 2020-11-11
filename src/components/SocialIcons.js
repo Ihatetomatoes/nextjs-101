@@ -23,7 +23,13 @@ const SocialLink = ({ type }) => {
   });
   return (
     <li className="sm:w-auto text-center m-0 self-center">
-      <a target="_blank" href={social[type]} className={btnClass}>
+      <a
+        target="_blank"
+        title={`Follow me on ${type.toUpperCase()}`}
+        href={social[type]}
+        rel="noopener"
+        className={btnClass}
+      >
         <span className="w-4 h-4 inline-block">{Icons[type]}</span>
       </a>
     </li>

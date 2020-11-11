@@ -6,7 +6,11 @@ const Header = () => (
   <div className="sm:flex sm:flex-row pb-8 text-center sm:text-left">
     <Link href="/">
       <a title="Go to course overview" className="block">
-        <img className="m-auto my-4 sm:m-0 w-24 sm:w-auto" src={logo} />
+        <img
+          className="m-auto my-4 sm:m-0 w-24 sm:w-auto"
+          alt="Ihatetomatoes"
+          src={logo}
+        />
       </a>
     </Link>
     <div className="sm:pl-8 self-center w-full">
