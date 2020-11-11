@@ -10,6 +10,11 @@ export default function Home({ allPosts }) {
         <title>{`${siteName} by ${author}`}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
+          name="description"
+          content={siteDescription}
+          key="descriptionMeta"
+        />
+        <meta
           property="og:url"
           content="https://ihatetomatoes-nextjs-101.vercel.app/"
           key="url"
