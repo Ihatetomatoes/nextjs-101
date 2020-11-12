@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 import { Cross, Loading } from "../icons";
 
-const SignupForm = () => {
+const SignupForm = ({ title }) => {
   // front end validation with react-hook-form
   // prevent submitting invalid or empty emails
   const { register, errors, handleSubmit, reset } = useForm();
@@ -59,9 +59,7 @@ const SignupForm = () => {
 
   return (
     <>
-      <p className="p-1 mb-2">
-        Leave your email below, to be notified when this course is ready.
-      </p>
+      <p className="p-1 mb-2">{title}</p>
       <form className="w-full max-w-sm" onSubmit={handleSubmit(onSubmit)}>
         <div className={formClass}>
           <div className="flex flex-col w-full">

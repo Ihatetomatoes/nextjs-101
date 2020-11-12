@@ -8,9 +8,14 @@ const ButtonLink = React.forwardRef(
       "inline-block border border-gray-200 px-4 py-2 rounded-sm bg-gray-100 text-sm hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors duration-200": true,
       "place-self-end ml-auto text-right": direction === "Next",
     });
+    const isNext = direction === "Next";
+    const isPrev = direction === "Previous";
     return (
       <a href={href} onClick={onClick} ref={ref} className={btnClass}>
-        <strong>{direction}</strong>
+        <strong>
+          {isPrev && <>← </>}
+          {direction} {isNext && <> →</>}
+        </strong>
         <br />
         <span>{title}</span>
       </a>

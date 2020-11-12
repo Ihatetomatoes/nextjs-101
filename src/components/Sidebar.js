@@ -6,7 +6,7 @@ import React from "react";
 const ProgressMarker = ({ isCurrent, isCompleted }) => {
   const markerClass = classNames({
     "bg-gray-200 text-white rounded-full inline-block w-2 h-2 self-center mr-2 transition-colors duration-200": true,
-    "bg-blue-500": isCompleted || isCurrent,
+    "bg-completed": isCompleted || isCurrent,
   });
   return <span className={markerClass}>&nbsp;</span>;
 };

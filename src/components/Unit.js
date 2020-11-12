@@ -1,14 +1,13 @@
-import classNames from "classnames";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Tick } from "../icons";
+
+const UnitProgress = dynamic(() => import("./UnitProgress"), {
+  ssr: false,
+});
 
 const Unit = ({ unit, index, isCompleted }) => {
   const { slug, title, excerpt } = unit;
-  const tickClass = classNames({
-    "rounded-full border border-gray-200 w-10 h-10 flex bg-white": true,
-    "border-dashed": !isCompleted,
-    "border-solid": isCompleted,
-  });
+
   return (
     <li className="border border-gray-200 border-t-0 relative z-10">
       <Link key={slug} href={`post/${slug}`}>
@@ -28,11 +27,7 @@ const Unit = ({ unit, index, isCompleted }) => {
               </span>
             </span>
             <span className="ml-auto self-center">
-              <span className={tickClass}>
-                {isCompleted && (
-                  <Tick className="h-4 w-8 self-center mx-auto" />
-                )}
-              </span>
+              <UnitProgress isCompleted={isCompleted} />
             </span>
           </span>
         </a>

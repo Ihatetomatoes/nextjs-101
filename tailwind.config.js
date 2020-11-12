@@ -19,6 +19,7 @@ module.exports = {
         youtube: "#c4302b",
         twitch: "#9146FF",
         success: "#587e0e",
+        completed: "#83B919",
         gray: {
           50: "#F4F4F4",
           100: "#F9F9F9",

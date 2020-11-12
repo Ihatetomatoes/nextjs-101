@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Tick } from "../icons";
+import { SignupForm } from "./";
 import { coverImage, outcomes, siteName } from "./Meta";
 
 const StartBtn = () => (
@@ -41,7 +42,7 @@ const Hero = () => {
             ))}
           </ul>
         )}
-        <StartBtn />
+        <SignupForm title="Leave your email below, to be notified when this course is ready." />
       </div>
     </div>
   );
