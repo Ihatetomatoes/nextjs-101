@@ -1,10 +1,10 @@
 ---
-id: "2"
-order: 2
-title: 'Introduction to Next.js 2'
-excerpt: 'Why to use Next.js for your next static site project.'
+id: "4"
+order: 4
+title: 'Fetching data'
+excerpt: 'Learn how to fetch data from API.'
 coverImage: ''
-module: ''
+module: 'API Routes'
 ogImage:
   url: '/assets/course/introduction/img_introduction.jpg'
 ---

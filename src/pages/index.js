@@ -3,8 +3,10 @@ import React from "react";
 import { getAllPosts } from "../../lib/api";
 import { Author, Header, Hero, Layout, Module, Unit } from "../components";
 import { author, ogImage, siteDescription, siteName } from "../components/Meta";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function Home({ allPosts }) {
+  const [progress] = useLocalStorage("progress", []);
   return (
     <Layout>
       <Head>
@@ -39,13 +41,19 @@ export default function Home({ allPosts }) {
         {allPosts && (
           <ol className="mb-4">
             {allPosts.map((unit, index) => {
+              const isCompleted = progress.find((u) => u.path === unit.slug);
               const item = unit.module ? (
                 <React.Fragment key={unit.module}>
                   <Module module={unit.module} />
-                  <Unit index={index} unit={unit} />
+                  <Unit index={index} unit={unit} isCompleted={isCompleted} />
                 </React.Fragment>
               ) : (
-                <Unit key={unit.slug} index={index} unit={unit} />
+                <Unit
+                  key={unit.slug}
+                  index={index}
+                  unit={unit}
+                  isCompleted={isCompleted}
+                />
               );
               return item;
             })}

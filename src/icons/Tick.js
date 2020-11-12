@@ -2,7 +2,7 @@ import * as React from "react";
 
 function SvgTick(props) {
   return (
-    <svg width={32} height={26} fill="none" {...props}>
+    <svg viewBox="0 0 32 26" fill="none" {...props}>
       <path
         stroke="#83B919"
         strokeWidth={5.931}

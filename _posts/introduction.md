@@ -5,7 +5,6 @@ title: 'Introduction to Next.js'
 excerpt: 'Why to use Next.js for your next static site project.'
 coverImage: ''
 module: 'Introduction and Setup'
-date: '2020-03-16T05:35:07.322Z'
 ogImage:
   url: '/assets/course/introduction/img_introduction.jpg'
 ---
