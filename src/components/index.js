@@ -3,6 +3,7 @@ export { default as Header } from "./Header";
 export { default as Hero } from "./Hero";
 export { default as Layout } from "./Layout";
 export { default as Module } from "./Module";
+export { default as Navigation } from "./Navigation";
 export { default as Sidebar } from "./Sidebar";
 export { default as SignupForm } from "./SignupForm";
 export { default as SocialIcons } from "./SocialIcons";

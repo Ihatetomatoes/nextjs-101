@@ -1,6 +1,7 @@
 import Head from "next/head";
+import React from "react";
 import { getAllPosts } from "../../lib/api";
-import { Author, Header, Hero, Layout } from "../components";
+import { Author, Header, Hero, Layout, Module, Unit } from "../components";
 import { author, ogImage, siteDescription, siteName } from "../components/Meta";
 
 export default function Home({ allPosts }) {
@@ -35,21 +36,21 @@ export default function Home({ allPosts }) {
       <main className="bg-white p-4 sm:p-8 min-h-full col-span-8 col-start-2">
         <Header />
         <Hero />
-        {/* {allPosts && (
+        {allPosts && (
           <ol className="mb-4">
             {allPosts.map((unit, index) => {
               const item = unit.module ? (
-                <>
-                  <Module key={unit.module} module={unit.module} />
-                  <Unit key={unit.slug} index={index} unit={unit} />
-                </>
+                <React.Fragment key={unit.module}>
+                  <Module module={unit.module} />
+                  <Unit index={index} unit={unit} />
+                </React.Fragment>
               ) : (
                 <Unit key={unit.slug} index={index} unit={unit} />
               );
               return item;
             })}
           </ol>
-        )} */}
+        )}
         <Author />
       </main>
     </Layout>

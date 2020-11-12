@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { Tick } from "../icons";
 import { coverImage, outcomes, siteName } from "./Meta";
-import SignupForm from "./SignupForm";
 
 const StartBtn = () => (
   <Link href="/post/introduction">
@@ -13,7 +12,7 @@ const StartBtn = () => (
 );
 
 const ComingSoonBadge = () => (
-  <span className="bg-blue-500 text-white py-2 px-4 rounded-md transition duration-200">
+  <span className="bg-blue-500 text-white text-xs py-1 px-2 rounded-md transition duration-200 mb-4 inline-block">
     Coming Soon!
   </span>
 );
@@ -42,7 +41,7 @@ const Hero = () => {
             ))}
           </ul>
         )}
-        <SignupForm />
+        <StartBtn />
       </div>
     </div>
   );
