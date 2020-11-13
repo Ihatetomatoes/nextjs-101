@@ -27,7 +27,7 @@ const Navigation = ({ currentUnit, units }) => {
   const nextUnit = units.filter((unit) => unit.order === currentUnit + 1);
   const prevUnit = units.filter((unit) => unit.order === currentUnit - 1);
   return (
-    <div className="border border-l-0 border-r-0 border-b-0 border-gray-200 py-8 mt-16 mb-8 flex">
+    <div className="border border-l-0 border-r-0 border-b-0 border-gray-200 pt-4 md:pt-8 mt-16 mb-0 flex">
       {prevUnit.length ? (
         <Link href={`/post/${prevUnit[0].slug}`} passHref>
           <ButtonLink direction="Previous" title={prevUnit[0].title} />

@@ -6,7 +6,7 @@ import { coverImage, outcomes, siteName } from "./Meta";
 
 const StartBtn = () => (
   <Link href="/post/introduction">
-    <a className="bg-red-500 text-white py-2 px-4 rounded-sm hover:bg-red-600 transition duration-200">
+    <a className="bg-red-500 text-white py-2 px-4 rounded-sm hover:bg-red-600 transition duration-200 block text-center md:text-left md:inline-block">
       Start Learning →
     </a>
   </Link>
