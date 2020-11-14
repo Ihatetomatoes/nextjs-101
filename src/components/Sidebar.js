@@ -14,19 +14,19 @@ const ProgressMarker = ({ isCurrent, isCompleted }) => {
 
 const Sidebar = ({ units, router: { query }, progress, isSticky }) => {
   const sidebarClass = classNames({
-    "md:p-4": true,
+    "p-4 bg-white border border-gray-200 md:border-0 m-4": true,
     "sticky top-0": isSticky,
   });
   return (
     <div className="col-span-3">
       <div className={sidebarClass}>
-        <div className="bg-white p-4">
+        <div className="py-4">
           <CourseProgress
             units={units}
             progress={progress}
             className="hidden md:block"
           />
-          <div className="bg-white border p-4 md:p-0 border-gray-200 md:border-0 md:bg-transparent">
+          <div className="md:p-0">
             <ul>
               {units.map(({ title, slug, module }) => {
                 const listItemClass = classNames({

@@ -5,7 +5,7 @@ const CourseProgress = ({ units, progress }) => {
   const awardedPts = completedUnitsCount * unitReward;
 
   return (
-    <div className="bg-white p-4 mb-4 border border-gray-200 rounded-sm md:border-0 md:p-0">
+    <div className="mb-4">
       <p className="text-center mb-2">
         <strong className="text-lg">{completedUnitsCount * unitReward}</strong>{" "}
         points

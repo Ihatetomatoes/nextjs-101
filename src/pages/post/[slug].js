@@ -57,7 +57,7 @@ const Unit = ({ unit, allUnits, router }) => {
           key="description"
         />
       </Head>
-      <main className="bg-white p-4 mb-4 sm:p-8 border-gray-200 min-h-full col-span-8 col-start-2">
+      <main className="bg-white p-4 mb-4 md:p-8 border-gray-200 min-h-full col-span-8 col-start-2">
         <Header />
         <UnitCard unit={unit} />
         <div
