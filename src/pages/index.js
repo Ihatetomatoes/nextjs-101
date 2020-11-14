@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import { getAllPosts } from "../../lib/api";
-import { Author, Header, Hero, Layout, Module, Unit } from "../components";
+import { Author, Header, Hero, Layout } from "../components";
 import { author, ogImage, siteDescription, siteName } from "../components/Meta";
 import useLocalStorage from "../hooks/useLocalStorage";
 
@@ -38,7 +38,7 @@ export default function Home({ allPosts }) {
       <main className="bg-white p-4 sm:p-8 min-h-full col-span-8 col-start-2">
         <Header />
         <Hero />
-        {allPosts && (
+        {/* {allPosts && (
           <ol className="mb-4">
             {allPosts.map((unit, index) => {
               const isCompleted = progress.find((u) => u.path === unit.slug);
@@ -58,7 +58,7 @@ export default function Home({ allPosts }) {
               return item;
             })}
           </ol>
-        )}
+        )} */}
         <Author />
       </main>
     </Layout>
