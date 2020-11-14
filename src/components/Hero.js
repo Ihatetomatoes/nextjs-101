@@ -29,6 +29,7 @@ const Hero = () => {
         />
       </div>
       <div className="px-4 md:px-8 py-6 self-center md:w-2/3">
+        <ComingSoonBadge />
         <h2 className="font-bold text-2xl mb-3">What you'll learn</h2>
         {outcomes && (
           <ul className="mb-6">

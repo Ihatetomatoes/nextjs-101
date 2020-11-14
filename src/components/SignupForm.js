@@ -4,17 +4,26 @@ import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 import { Cross, Loading } from "../icons";
 
+const ErrorMessage = ({ message }) => (
+  <p className="text-sm px-3 mt-1 text-red-500 inline-block">{message}</p>
+);
+
 const SignupForm = ({ title }) => {
   // front end validation with react-hook-form
   // prevent submitting invalid or empty emails
   const { register, errors, handleSubmit, reset } = useForm();
 
+  // subscribe
+  const subscribe = async (email) => {
+    const res = await fetch(`/api/subscribe?&tags=1980921`);
+    if (!res.ok) throw "There was an error subscribing to the list.";
+  };
+
   // react query mutation that will call our API route
-  const [mutate, { isLoading, isSuccess, reset: resetMutation }] = useMutation(
-    ({ email }) => {
-      return fetch(`/api/subscribe?email=${email}&tags=1980921`);
-    }
-  );
+  const [
+    mutate,
+    { isLoading, isSuccess, reset: resetMutation, isError, error },
+  ] = useMutation(({ email }) => subscribe(email));
 
   // handle form submit
   const onSubmit = (data) => mutate(data);
@@ -88,11 +97,8 @@ const SignupForm = ({ title }) => {
             )}
           </button>
         </div>
-        {errors.email && (
-          <p className="text-sm px-3 mt-1 text-red-500 inline-block">
-            Please enter a valid email.
-          </p>
-        )}
+        {errors.email && <ErrorMessage message="Please enter a valid email." />}
+        {isError && <ErrorMessage message={error} />}
       </form>
     </>
   );
