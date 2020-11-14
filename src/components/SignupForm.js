@@ -15,7 +15,7 @@ const SignupForm = ({ title }) => {
 
   // subscribe
   const subscribe = async (email) => {
-    const res = await fetch(`/api/subscribe?&tags=1980921`);
+    const res = await fetch(`/api/subscribe?email=${email}&tags=1980921`);
     if (!res.ok) throw "There was an error subscribing to the list.";
   };
 
