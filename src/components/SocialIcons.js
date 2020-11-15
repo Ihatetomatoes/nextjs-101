@@ -1,10 +1,7 @@
+import { social } from "@config";
+import { Facebook, Twitch, Twitter, YouTube } from "@icons/index";
 import classNames from "classnames";
 import React from "react";
-import { social } from "../components/Meta";
-import Facebook from "../icons/Facebook";
-import Twitch from "../icons/Twitch";
-import Twitter from "../icons/Twitter";
-import YouTube from "../icons/Youtube";
 
 const Icons = {
   facebook: <Facebook />,

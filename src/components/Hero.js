@@ -1,19 +1,19 @@
+import { coverImage, outcomes, siteName } from "@config";
+import { Tick } from "@icons/index";
 import Link from "next/link";
 import React from "react";
-import { Tick } from "../icons";
-import { coverImage, outcomes, siteName } from "./Meta";
-import SignupForm from "./SignupForm";
+import { SignupForm } from ".";
 
 const StartBtn = () => (
   <Link href="/post/introduction">
-    <a className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition duration-200">
+    <a className="bg-red-500 text-white py-2 px-4 rounded-sm hover:bg-red-600 transition duration-200 block text-center md:text-left md:inline-block">
       Start Learning →
     </a>
   </Link>
 );
 
 const ComingSoonBadge = () => (
-  <span className="bg-blue-500 text-white py-2 px-4 rounded-md transition duration-200">
+  <span className="bg-blue-500 text-white text-xs py-1 px-2 rounded-md transition duration-200 mb-4 inline-block">
     Coming Soon!
   </span>
 );
@@ -35,14 +35,15 @@ const Hero = () => {
             {outcomes.map((i) => (
               <li key={i} className="text-gray-700 list-none flex mb-2">
                 <span className="flex">
-                  <Tick className="h-6 w-10 self-center" />
+                  <Tick className="h-4 w-9 self-center" />
                 </span>
-                <span className="pl-1 opacity-75">{i}</span>
+                <span className="pl-2 opacity-75">{i}</span>
               </li>
             ))}
           </ul>
         )}
-        <SignupForm />
+        <ComingSoonBadge />
+        <SignupForm title="Leave your email below, to be notified when this course is ready." />
       </div>
     </div>
   );
