@@ -1,4 +1,5 @@
 /* Based on Monokai theme - https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css */
+/* purgecss start ignore */
  code[class*="language-"],
  pre[class*="language-"] {
      color: #f8f8f2;
@@ -131,3 +132,4 @@
  .token.entity {
      cursor: help;
  }
+ /* purgecss end ignore */
