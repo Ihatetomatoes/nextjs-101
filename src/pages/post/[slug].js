@@ -51,16 +51,11 @@ const Unit = ({ unit, allUnits, router }) => {
           content={siteDescription}
           key="description"
         />
-        <link
-          href={`https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css`}
-          rel="stylesheet"
-        />
-        ;
       </Head>
       <main className="bg-white p-4 mb-4 md:p-8 border-gray-200 min-h-full col-span-8 col-start-2">
         <Header />
         <UnitCard unit={unit} />
-        <div
+        <article
           className="prose md:prose-md"
           dangerouslySetInnerHTML={{ __html: unit.content }}
         />

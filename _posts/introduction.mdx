@@ -18,11 +18,36 @@ Here are some of the things that `Next.js` gives you out of the box:
 - image optimization
 - static site generation or server side rendering
 
+
+```jsx
+// JSX comment single
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import { withRouter } from "next/router";
+import { useEffect } from "react";
+```
+
 ```html
+<!-- HTML comments -->
 <div class="text">
-  <div class="text-white bg-gray-100">Some text goes here</div>
+  <div class="text-white bg-gray-100">Some HTML snippet</div>
   <div class="text-white bg-gray-100">Some text goes here</div>
 </div>
+```
+
+- file based routing (`pages/index.js`)
+- dynamic route segments (`pages/unit/[id].js`)
+- image optimization
+- static site generation or server side rendering
+
+```css
+/* CSS comment */
+.prose code {
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  padding: 2px 4px;
+}
 ```
 
 ```js
@@ -38,12 +63,25 @@ export default async function markdownToHtml(markdown) {
 ```
 
 ```jsx
+// JSX comment
 <Unit
   key={unit.slug}
   index={index}
   unit={unit}
   isCompleted={isCompleted}
 />
+```
+
+```jsx
+import React from "react";
+
+const Module = ({ module }) => (
+  <li className="mt-4 relative z-10 border border-gray-200">
+    <h3 className="p-2 px-4 block bg-primaryGray font-bold">{module}</h3>
+  </li>
+);
+
+export default Module;
 ```
 
 > Some quote goes here
