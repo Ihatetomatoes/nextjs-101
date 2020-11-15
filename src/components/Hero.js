@@ -1,8 +1,8 @@
+import { coverImage, outcomes, siteName } from "@config";
+import { Tick } from "@icons/index";
 import Link from "next/link";
 import React from "react";
-import { Tick } from "../icons";
-import { SignupForm } from "./";
-import { coverImage, outcomes, siteName } from "./Meta";
+import { SignupForm } from ".";
 
 const StartBtn = () => (
   <Link href="/post/introduction">
@@ -29,7 +29,6 @@ const Hero = () => {
         />
       </div>
       <div className="px-4 md:px-8 py-6 self-center md:w-2/3">
-        <ComingSoonBadge />
         <h2 className="font-bold text-2xl mb-3">What you'll learn</h2>
         {outcomes && (
           <ul className="mb-6">
@@ -43,6 +42,7 @@ const Hero = () => {
             ))}
           </ul>
         )}
+        <ComingSoonBadge />
         <SignupForm title="Leave your email below, to be notified when this course is ready." />
       </div>
     </div>

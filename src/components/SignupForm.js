@@ -1,8 +1,8 @@
+import { Cross, Loading } from "@icons/index";
 import classNames from "classnames";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
-import { Cross, Loading } from "../icons";
 
 const ErrorMessage = ({ message }) => (
   <p className="text-sm px-3 mt-1 text-red-500 inline-block">{message}</p>

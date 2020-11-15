@@ -1,6 +1,6 @@
+import { author, authorImg, authorTitle, shortBio } from "@config";
 import Image from "next/image";
 import React from "react";
-import { author, authorImg, authorTitle, shortBio } from "../components/Meta";
 import { SocialIcons } from "./";
 
 const Author = () => {

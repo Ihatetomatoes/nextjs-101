@@ -1,5 +1,5 @@
+import { Tick } from "@icons/index";
 import classNames from "classnames";
-import { Tick } from "../icons";
 
 const UnitProgress = ({ isCompleted }) => {
   const tickClass = classNames({

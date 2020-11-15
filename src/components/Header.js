@@ -1,6 +1,6 @@
+import { logo, siteDescription, siteName } from "@config";
 import Link from "next/link";
 import React from "react";
-import { logo, siteDescription, siteName } from "./Meta";
 
 const Header = () => (
   <div className="sm:flex sm:flex-row pb-8 text-center sm:text-left">

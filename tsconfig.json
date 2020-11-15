@@ -16,7 +16,28 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@config": [
+        "site.config.js"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@icons/*": [
+        "src/icons/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",

@@ -1,19 +1,14 @@
+import { Header, Layout, Navigation, UnitCard } from "@components/index";
+import { author, ogImage, siteDescription, siteName } from "@config";
+import useLocalStorage from "@hooks/useLocalStorage";
+import { getAllPosts, getPostBySlug } from "@lib/api";
+import markdownToHtml from "@lib/markdownToHtml";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { withRouter } from "next/router";
 import { useEffect } from "react";
-import { getAllPosts, getPostBySlug } from "../../../lib/api";
-import markdownToHtml from "../../../lib/markdownToHtml";
-import { Header, Layout, Navigation, UnitCard } from "../../components";
-import {
-  author,
-  ogImage,
-  siteDescription,
-  siteName,
-} from "../../components/Meta";
-import useLocalStorage from "../../hooks/useLocalStorage";
 
-const Sidebar = dynamic(() => import("../../components/Sidebar"), {
+const Sidebar = dynamic(() => import("@components/Sidebar"), {
   ssr: false,
 });
 
@@ -56,12 +51,17 @@ const Unit = ({ unit, allUnits, router }) => {
           content={siteDescription}
           key="description"
         />
+        <link
+          href={`https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css`}
+          rel="stylesheet"
+        />
+        ;
       </Head>
       <main className="bg-white p-4 mb-4 md:p-8 border-gray-200 min-h-full col-span-8 col-start-2">
         <Header />
         <UnitCard unit={unit} />
         <div
-          className="prose md:prose-lg"
+          className="prose md:prose-md"
           dangerouslySetInnerHTML={{ __html: unit.content }}
         />
         <Navigation currentUnit={unit.order} units={allUnits} />

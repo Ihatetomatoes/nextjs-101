@@ -18,11 +18,41 @@ Here are some of the things that `Next.js` gives you out of the box:
 - image optimization
 - static site generation or server side rendering
 
+```html
+<div class="text">
+  <div class="text-white bg-gray-100">Some text goes here</div>
+  <div class="text-white bg-gray-100">Some text goes here</div>
+</div>
+```
+
+```js
+// lib/markdown.js
+import remark from 'remark';
+import html from 'remark-html';
+import prism from 'remark-prism';
+
+export default async function markdownToHtml(markdown) {
+  const result = await remark().use(html).use(prism).process(markdown);
+  return result.toString();
+}
+```
+
+```jsx
+<Unit
+  key={unit.slug}
+  index={index}
+  unit={unit}
+  isCompleted={isCompleted}
+/>
+```
+
+> Some quote goes here
+
 There are many more benefits, but in this course we will focus on all of the above.
 
 ## What you will build
 
-In this Next.js mini course we will create a simple microsite.
+In this Next.js mini course we will `create` a simple microsite.
 
 **This site**, exactly what you read now.
 
