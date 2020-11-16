@@ -1,5 +1,5 @@
-import { Header, Layout, Navigation, UnitCard } from "@components/index";
-import { author, ogImage, siteDescription, siteName } from "@config";
+import { Header, Layout, Navigation, UnitCard, UnitVideo } from "@components/index";
+import { author, ogImage, siteDescription, siteName, videoType } from "@config";
 import useLocalStorage from "@hooks/useLocalStorage";
 import { getAllPosts, getPostBySlug } from "@lib/api";
 import markdownToHtml from "@lib/markdownToHtml";
@@ -55,6 +55,8 @@ const Unit = ({ unit, allUnits, router }) => {
       <main className="bg-white p-4 mb-4 md:p-8 border-gray-200 min-h-full col-span-8 col-start-2">
         <Header />
         <UnitCard unit={unit} />
+        {unit.videoId && <UnitVideo type={videoType} videoId={unit.videoId} />}
+
         <article
           className="prose md:prose-md"
           dangerouslySetInnerHTML={{ __html: unit.content }}
@@ -77,6 +79,7 @@ export async function getStaticProps({ params }) {
     "content",
     "module",
     "ogImage",
+    "videoId",
     "coverImage",
   ]);
   const content = await markdownToHtml(unit.content || "");

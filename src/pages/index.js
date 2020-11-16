@@ -1,4 +1,4 @@
-import { Author, Header, Hero, Layout } from "@components/index";
+import { Author, Header, Hero, Layout, Module, Unit } from "@components/index";
 import { author, ogImage, siteDescription, siteName } from "@config";
 import useLocalStorage from "@hooks/useLocalStorage";
 import { getAllPosts } from "@lib/api";
@@ -39,7 +39,7 @@ export default function Home({ allPosts }) {
       <main className="bg-white p-4 sm:p-8 min-h-full col-span-8 col-start-2">
         <Header />
         <Hero />
-        {/* {allPosts && (
+        {allPosts && (
           <ol className="mb-4">
             {allPosts.map((unit, index) => {
               const isCompleted = progress.find((u) => u.path === unit.slug);
@@ -59,7 +59,7 @@ export default function Home({ allPosts }) {
               return item;
             })}
           </ol>
-        )} */}
+        )}
         <Author />
       </main>
     </Layout>
