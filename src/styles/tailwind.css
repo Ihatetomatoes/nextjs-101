@@ -6,9 +6,12 @@
   @apply flex flex-col min-h-screen;
 }
 
+.prose blockquote {
+  @apply bg-blue-100 p-4 my-4 border-blue-400;
+}
 .prose code::before,
 .prose code::after {
-  content: '';
+  content: "";
 }
 .prose code {
   color: #d14;
@@ -18,5 +21,5 @@
 }
 .prose pre {
   color: #f8f8f2;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
 }

@@ -10,6 +10,8 @@ videoId: ''
 
 ## Why Next.js
 
+![Next.js - React Framework](/assets/course/introduction/img_nextjs.png)
+
 [Next.js](https://nextjs.org/) is a React framework, that simplifies a lot things that **you would need to add** to most React apps and projects.
 
 For example if you need:

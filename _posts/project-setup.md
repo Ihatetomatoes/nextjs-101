@@ -14,7 +14,7 @@ Similar to [Create React App](https://reactjs.org/docs/create-a-new-react-app.ht
 
 **CNA** lets you **quickly spin up** a project with **0 dependencies**, but also give you a flexibility to extend the default configuration later, if you choose to.
 
-TLTR; You can [**clone the starting files**](#starting-files) at the bottom of this unit, but here is a step by step guide how I did setup this project up.
+> TLTR; You can [**clone the starting files**](#starting-files) at the bottom of this unit, but here is a step by step guide how I did setup this project up.
 
 ## 1. Create a Github Repo
 
@@ -57,7 +57,7 @@ There are **multiple ways how to style your components** in Next.js.
 
 Next.js supports [CSS Modules](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css) out of the box, but we will want to use [TailwindCSS](https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss).
 
-We will cover the main **benefits of TailwindCSS** later on.
+We will cover the main [**benefits of TailwindCSS**](/post/layout-and-hero) later on.
 
 ### 3.1 Install TailwindCSS
 
@@ -68,7 +68,7 @@ To install it follow this official [TailwindCSS with Next.js guide](https://gith
 npm install tailwindcss autoprefixer@^9
 // generate tailwind config
 npx tailwindcss init -p
-// generate tailwind full config - will explain later
+// generate tailwind full config - I will explain later
 npx tailwindcss init tailwind.config-full.js  --full
 ```
 

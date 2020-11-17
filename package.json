@@ -24,7 +24,7 @@
     "remark": "^12.0.0",
     "remark-autolink-headings": "^6.0.1",
     "remark-html": "^13.0.1",
-    "remark-prism": "^1.1.14",
+    "remark-prism": "1.1.14",
     "remark-slug": "^6.0.0",
     "tailwindcss": "^1.9.6"
   },
