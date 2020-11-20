@@ -12,7 +12,7 @@ const ProgressMarker = ({ isCurrent, isCompleted }) => {
   return <span className={markerClass}>&nbsp;</span>;
 };
 
-const UnitItem = ({unit: {slug, title}, progress, query}) => {
+const UnitItem = ({ unit: { slug, title }, progress, query }) => {
   const listItemClass = classNames({
     "text-sm": true,
     "font-bold": slug === query.slug,
@@ -23,24 +23,24 @@ const UnitItem = ({unit: {slug, title}, progress, query}) => {
         <a className="p-1 pl-0 inline-flex">
           <ProgressMarker
             isCurrent={slug === query.slug}
-            isCompleted={progress.find(
-              (item) => item.path === slug
-            )} />
+            isCompleted={progress.find((item) => item.path === slug)}
+          />
           {title}
         </a>
       </Link>
     </li>
   );
 };
-const ModuleItem = ({module}) => <li className="font-bold py-2">{module}</li>;
+const ModuleItem = ({ module }) => <li className="font-bold py-2">{module}</li>;
 
 const Sidebar = ({ units, router: { query }, progress, isSticky }) => {
   const sidebarClass = classNames({
     "p-4 bg-white border border-gray-200 md:border-0 m-4": true,
     "sticky top-0": isSticky,
   });
+
   return (
-    <div className="col-span-3">
+    <div className="col-span-3 relative">
       <div className={sidebarClass}>
         <div className="py-4">
           <CourseProgress
@@ -51,14 +51,18 @@ const Sidebar = ({ units, router: { query }, progress, isSticky }) => {
           <div className="md:p-0">
             <ul>
               {units.map((unit) => {
-                
                 const item = unit.module ? (
                   <React.Fragment key={unit.slug}>
                     <ModuleItem module={unit.module} />
                     <UnitItem unit={unit} query={query} progress={progress} />
                   </React.Fragment>
                 ) : (
-                  <UnitItem key={unit.slug} unit={unit} query={query} progress={progress} />
+                  <UnitItem
+                    key={unit.slug}
+                    unit={unit}
+                    query={query}
+                    progress={progress}
+                  />
                 );
 
                 return item;

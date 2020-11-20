@@ -2,10 +2,12 @@ import useLocalStorage from "@hooks/useLocalStorage";
 
 const ResetProgressBtn = () => {
   const [, setProgress] = useLocalStorage("progress");
+  const [, setCompleted] = useLocalStorage("completed");
   return (
     <button
       onClick={() => {
         setProgress([]);
+        setCompleted(false);
         location.reload();
       }}
       type="button"
