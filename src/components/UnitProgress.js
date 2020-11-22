@@ -5,7 +5,7 @@ const UnitProgress = ({ isCompleted }) => {
   const tickClass = classNames({
     "rounded-full border border-gray-200 w-10 h-10 flex bg-white": true,
     "border-dashed": !isCompleted,
-    "border-solid": isCompleted,
+    "border-solid ring-4 ring-success ring-opacity-10": isCompleted,
   });
   return (
     <span className={tickClass}>

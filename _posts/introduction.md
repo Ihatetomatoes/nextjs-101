@@ -1,71 +1,81 @@
 ---
 id: "1"
 order: 1
-title: 'Introduction to Next.js'
-excerpt: 'Why to use Next.js for your next static site project.'
+title: 'Introduction'
+excerpt: 'Why to use Next.js and what we will cover.'
 coverImage: ''
 module: 'Introduction and Setup'
-ogImage:
-  url: '/assets/course/introduction/img_introduction.jpg'
+videoId: 'NUQkajBdnmQ'
 ---
 
-[Next.js](https://nextjs.org/) is a React framework, that simplifies a lot things that **you would need to add** to most React apps or sites.
+## Why Next.js
 
-Here are some of the things that `Next.js` gives you out of the box:
+![Next.js - React Framework](/assets/course/introduction/img_nextjs.png)
 
-- file based routing (`pages/index.js`)
-- dynamic route segments (`pages/unit/[id].js`)
-- image optimization
-- static site generation or server side rendering
+[Next.js](https://nextjs.org/) is a React framework, that simplifies a lot things that **you would need to add** to most React apps and projects.
 
-```html
-<div class="text">
-  <div class="text-white bg-gray-100">Some text goes here</div>
-  <div class="text-white bg-gray-100">Some text goes here</div>
-</div>
-```
+For example if you need:
 
-```js
-// lib/markdown.js
-import remark from 'remark';
-import html from 'remark-html';
-import prism from 'remark-prism';
+- **multiple routes**, bring in [React Router](https://reactrouter.com/)
+- **dynamic routes**, configure `React Router`
+- **optimize images**, do it yourself
+- **SEO optimization**, bring in [React Helmet](https://github.com/nfl/react-helmet)
+- **prefetch links**, configure it yourself
 
-export default async function markdownToHtml(markdown) {
-  const result = await remark().use(html).use(prism).process(markdown);
-  return result.toString();
-}
-```
+`Next.js` gives you **all of this out of the box**:
 
-```jsx
-<Unit
-  key={unit.slug}
-  index={index}
-  unit={unit}
-  isCompleted={isCompleted}
-/>
-```
+- **file based routing**, create `pages/index.js`
+- **dynamic route segments**, create `pages/post/[slug].js`
+- **image optimization**, use `<Image />` from `next/image`
+- **link prefetching**, use `<Link />` from `next/link`
+- **static site generation** or server side rendering
 
-> Some quote goes here
+There is plenty of **other benefits**, but in this course we will focus mainly on the above.
 
-There are many more benefits, but in this course we will focus on all of the above.
+> `React` is great for `SPA` (single page applications), `Next.js` is great for projects where `SEO matters`.
+
+## When to use React vs Next.js
+
+React | Next.js
+--- | ---
+**One** `<div id="root" />` entry | **Full HTML** on the page
+**Single page applications** (SPA) | SPA **or** pre rendered
+**Dashboards** | **SEO** benefits
+Apps **behind** login | Statically **generated sites**
+**Client side** rendering (CSR) | Choose between **CSR or SSR**
+
+## This course is not
+
+- a complete guide to **Next.js** or **React.js**
+- a complete guide to **TailwindCSS**
+- a **full-stack** course teaching your **everything**
+
+## Who is this course for
+
+- Next.js beginners **with some React knowledge**
+- anyone who wants to **learn about modern front-end development**
+- anyone who wants to **build a practical component** from **start to finish**
 
 ## What you will build
 
-In this Next.js mini course we will `create` a simple microsite.
+In this Next.js mini course we will **create a simple landing page** with **email signup form**.
 
-**This site**, exactly what you read now.
+![Final Demo](/assets/course/introduction/img_final-demo.png)
 
-### The steps
+### What you will use
 
-- take content from markdown files
-- generate dynamic urls for each course unit
-- style everything with TailwindCSS
-- use MDX to use React components in the markdown files
-- deploy everything to Vercel
+- [Create Next App](https://nextjs.org/docs/api-reference/create-next-app)
+- [TailwindCSS](https://tailwindcss.com/) for **styling**
+- [React Hooks Form](https://react-hook-form.com/) for client side **validation**
+- [React Query](https://react-query.tanstack.com/) to **integrate** our form with [ConvertKit](convertkit.com) API
+- **Deploy** everything to [Vercel](https://vercel.com/)
 
-**Excited to learn** more about Next.js?
+### What do you need
 
-**Download the starting** files and keep coding along.
+If you **want to follow step by step** from start to finish **you will need**:
 
-[Download starting files TODO](https://github.com/Ihatetomatoes/)
+- [Github](http://github.com/) account
+- [Vercel](https://vercel.com/) account
+- [ConvertKit](https://convertkit.com/) account
+
+**Excited to learn** Next.js? **Lets setup the project** in the next unit.

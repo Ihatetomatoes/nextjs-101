@@ -52,7 +52,7 @@ const SignupForm = ({ title }) => {
 
   // css classes for our UI
   const formClass = classNames({
-    "flex items-center border rounded-md border-gray-300 p-1": true,
+    "flex items-center border rounded-md border-gray-300 p-1 focus-within:border-blue-500 focus-within:ring-blue-200 focus-within:ring-4": true,
     "bg-gray-100 border-gray-100": isLoading,
   });
 
@@ -78,8 +78,11 @@ const SignupForm = ({ title }) => {
               name="email"
               disabled={isLoading}
               ref={register({
-                required: true,
-                pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                required: "Email is required.",
+                pattern: {
+                  value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                  message: "Please enter a valid email.",
+                },
               })}
               placeholder="Jane Doe"
               aria-label="Full name"

@@ -22,4 +22,5 @@ module.exports = {
     youtube:
       "https://www.youtube.com/channel/UC7O6CntQoAI-wYyJxYiqNUg?sub_confirmation=1",
   },
+  videoType: "youtube"
 };

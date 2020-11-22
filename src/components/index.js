@@ -12,3 +12,5 @@ export { default as SocialIcons } from "./SocialIcons";
 export { default as Unit } from "./Unit";
 export { default as UnitCard } from "./UnitCard";
 export { default as UnitProgress } from "./UnitProgress";
+export { default as UnitVideo } from "./UnitVideo";
+

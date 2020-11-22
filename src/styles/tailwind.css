@@ -5,3 +5,21 @@
 #__next {
   @apply flex flex-col min-h-screen;
 }
+
+.prose blockquote {
+  @apply bg-blue-100 p-4 my-4 border-blue-400;
+}
+.prose code::before,
+.prose code::after {
+  content: "";
+}
+.prose code {
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  padding: 2px 4px;
+}
+.prose pre {
+  color: #f8f8f2;
+  background-color: #1e1e1e;
+}
