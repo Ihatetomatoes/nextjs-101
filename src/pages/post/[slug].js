@@ -1,4 +1,10 @@
-import { Header, Layout, Navigation, UnitCard, UnitVideo } from "@components/index";
+import {
+  Header,
+  Layout,
+  Navigation,
+  UnitCard,
+  UnitVideo,
+} from "@components/index";
 import { author, ogImage, siteDescription, siteName, videoType } from "@config";
 import useLocalStorage from "@hooks/useLocalStorage";
 import { getAllPosts, getPostBySlug } from "@lib/api";
@@ -27,7 +33,7 @@ const Unit = ({ unit, allUnits, router }) => {
   return (
     <Layout>
       <Head>
-        <title>{`${siteName} by ${author}`}</title>
+        <title>{`${unit.title} - ${siteName}`}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
