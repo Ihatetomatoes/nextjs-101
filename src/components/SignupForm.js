@@ -8,7 +8,7 @@ const ErrorMessage = ({ message }) => (
   <p className="text-sm px-3 mt-1 text-red-500 inline-block">{message}</p>
 );
 
-const SignupForm = ({ title }) => {
+const SignupForm = ({ title, isSlim }) => {
   // front end validation with react-hook-form
   // prevent submitting invalid or empty emails
   const { register, errors, handleSubmit, reset } = useForm();
@@ -33,26 +33,18 @@ const SignupForm = ({ title }) => {
     reset();
   }, [isSuccess]);
 
-  // if success show confirmation message instead of the form
-  if (isSuccess) {
-    return (
-      <div className="text-sm p-3 pr-1 bg-green-100 border rounded-md border-success text-success inline-flex">
-        <span>Success. Check your inbox and confirm your email.</span>
-        <span className="self-center flex mr-1">
-          <button
-            onClick={() => resetMutation()}
-            className="bg-success text-white rounded-full h-4 w-4 mt-auto ml-1 hover:bg-red-500 transition-colors duration-200"
-          >
-            <Cross className="h-2 w-2 mx-auto" />
-          </button>
-        </span>
-      </div>
-    );
-  }
-
   // css classes for our UI
+  const subWrapperClass = classNames({
+    "p-4 border border-blue-300 bg-blue-100 mb-4 md:mb-8 md:p-8": isSlim,
+  });
+
   const formClass = classNames({
-    "flex items-center border rounded-md border-gray-300 p-1 focus-within:border-blue-500 focus-within:ring-blue-200 focus-within:ring-4": true,
+    "w-full": true,
+    "max-w-sm": !isSlim,
+  });
+
+  const innerFormClass = classNames({
+    "flex items-center border rounded-md border-gray-300 p-1 bg-white focus-within:border-blue-500 focus-within:ring-blue-200 focus-within:ring-4": true,
     "bg-gray-100 border-gray-100": isLoading,
   });
 
@@ -66,11 +58,34 @@ const SignupForm = ({ title }) => {
     "disabled:opacity-75 cursor-not-allowed": isLoading,
   });
 
+  const successClass = classNames({
+    "p-3 pr-1 bg-green-100 border border-green-400 text-success inline-flex": true,
+    "text-sm rounded-md ": !isSlim,
+    "w-full my-4 md:my-8 p-8 md:text-md rounded-none": isSlim,
+  });
+
+  // if success show confirmation message instead of the form
+  if (isSuccess) {
+    return (
+      <div className={successClass}>
+        <span>Success. Check your inbox and confirm your email.</span>
+        <span className="self-center flex mr-1">
+          <button
+            onClick={() => resetMutation()}
+            className="bg-success text-white rounded-full h-4 w-4 mt-auto ml-1 hover:bg-red-500 transition-colors duration-200"
+          >
+            <Cross className="h-2 w-2 mx-auto" />
+          </button>
+        </span>
+      </div>
+    );
+  }
+
   return (
-    <>
+    <div className={subWrapperClass}>
       <p className="p-1 mb-2">{title}</p>
-      <form className="w-full max-w-sm" onSubmit={handleSubmit(onSubmit)}>
-        <div className={formClass}>
+      <form className={formClass} onSubmit={handleSubmit(onSubmit)}>
+        <div className={innerFormClass}>
           <div className="flex flex-col w-full">
             <input
               className={inputClass}
@@ -103,7 +118,7 @@ const SignupForm = ({ title }) => {
         {errors.email && <ErrorMessage message="Please enter a valid email." />}
         {isError && <ErrorMessage message={error} />}
       </form>
-    </>
+    </div>
   );
 };
 

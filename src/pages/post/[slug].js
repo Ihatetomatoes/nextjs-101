@@ -1,7 +1,9 @@
 import {
+  Author,
   Header,
   Layout,
   Navigation,
+  SignupForm,
   UnitCard,
   UnitVideo,
 } from "@components/index";
@@ -68,6 +70,11 @@ const Unit = ({ unit, allUnits, router }) => {
           dangerouslySetInnerHTML={{ __html: unit.content }}
         />
         <Navigation currentUnit={unit.order} units={allUnits} />
+        <SignupForm
+          isSlim
+          title="Enjoying this course? Subscribe for more content from Petr."
+        />
+        <Author />
       </main>
       <Sidebar isSticky units={allUnits} progress={progress} />
     </Layout>
