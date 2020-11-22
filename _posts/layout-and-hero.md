@@ -62,8 +62,6 @@ Create a new `Layout` component.
 
 ```jsx
 // components/Layout.js
-import React from "react";
-
 const Layout = ({ children }) => {
   return (
     <div className="mx-auto md:px-4 md:max-w-3xl min-h-screen w-full">
@@ -74,6 +72,8 @@ const Layout = ({ children }) => {
 
 export default Layout;
 ```
+
+> Do we need to [import React in Next.js projects components](https://stackoverflow.com/questions/63090037/importing-react-into-pages-in-next-js)? Only if you need to use the keyword React. (React.Component)
 
 Then we will update the content of `index.js`.
 
@@ -101,8 +101,6 @@ Instead of growing the markup of the home component, lets create a new `Hero` co
 
 ```jsx{23}
 // src/components/Hero.js
-import React from "react";
-
 const outcomes = [
   "How to build this landing page with Next.js",
   "How to create API endpoint and integrate with ConvertKit API",

@@ -25,7 +25,7 @@ const SignupForm = ({ title }) => {
     <>
       <p className="p-1 mb-2">{title}</p>
       <form className="w-full max-w-sm">
-        <div className="flex items-center border rounded-md border-gray-300 p-1">
+        <div className="flex items-center border rounded-md border-gray-300 p-1 focus-within:border-blue-500 focus-within:ring-blue-200 focus-within:ring-4">
           <input
             className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
             type="text"
@@ -51,6 +51,18 @@ If you copy and paste their example HTML markup, make sure you change `class` to
 
 The details of the design are not as important, feel free to tweak it to your liking, and **include this form** in the `Hero` component.
 
+```jsx{6}
+// src/components/Hero.js
+const Hero = () => {
+  ...
+  return (
+    ...
+    <SignupForm title="Leave your email below, to be notified when this course is ready." />
+    ...
+  )
+}
+```
+
 ## Customising TailwindCSS Colors
 
 To customise the default Tailwind color scheme we can generate new colors through this [handy generator](https://javisperez.github.io/tailwindcolorshades/#/).
@@ -60,6 +72,7 @@ To customise the default Tailwind color scheme we can generate new colors throug
 theme: {
   extend: {
     colors: {
+      success: "#587e0e",
       gray: {
         50: "#F4F4F4",
         100: "#F9F9F9",
@@ -71,6 +84,18 @@ theme: {
         700: "#161616",
         800: "#121212",
         900: "#0C0C0C",
+      },
+      blue: {
+        50: "#F2F8FE",
+        100: "#E6F1FE",
+        200: "#BFDBFC",
+        300: "#99C6FA",
+        400: "#4D9BF7",
+        500: "#0070F3",
+        600: "#0065DB",
+        700: "#004392",
+        800: "#00326D",
+        900: "#002249",
       },
       red: {
         50: "#FDF5F3",
@@ -159,7 +184,7 @@ const SignupForm = ({ title }) => {
 
   // css classes for our UI
   const formClass = classNames({
-    "flex items-center border rounded-md border-gray-300 p-1": true,
+    "flex items-center border rounded-md border-gray-300 p-1 focus-within:border-blue-500 focus-within:ring-blue-200 focus-within:ring-4": true,
     "bg-gray-100 border-gray-100": isLoading,
   });
 

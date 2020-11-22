@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3005",
     "build": "next build",
     "start": "next start"
   },
@@ -17,6 +17,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "mdx-embed": "0.0.14",
     "next": "10.0.1",
+    "next-ga": "^2.3.4",
     "postcss": "^8.1.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",

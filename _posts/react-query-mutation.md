@@ -53,13 +53,13 @@ const SignupForm = ({ title }) => {
     const subscribe ...
 
     const [ mutate, { isLoading } ] = useMutation(({ email }) => subscribe(email));
-    
+
     const onSubmit = (data) => mutate(data);
 
 }
 ```
 
-We can remove the hardcode isLoading, and use isLoading value returned by `useMutation`.
+We can remove the hardcoded isLoading, and use isLoading value returned by `useMutation`.
 
 On form submit we will run `mutate` and pass in the form `data`.
 
@@ -116,3 +116,41 @@ Now we have the UI responding to all the different states of the request.
 **Success** message displayed after a succesfull submission.
 
 ![Success state](/assets/course/styling/img_success.png)
+
+## Reset form and state
+
+The last outstanding bit is to show the form again.
+
+We can set a timer and hide it after 3 or 4 seconds, or add **close icon** to let the user do it.
+
+```jsx{1,3,8,11,18,21}
+import { Cross } from "../icons";
+
+const SuccessMessage = ({handleReset}) => (
+  <p className="text-sm p-3 bg-green-100 border rounded-md border-success text-success inline-flex">
+    <span>Success. Check your inbox and confirm your email.</span>
+    <span className="self-center flex mr-1">
+        <button
+            onClick={() => handleReset()}
+            className="bg-success text-white rounded-full h-4 w-4 mt-auto ml-1 hover:bg-red-500 transition-colors duration-200"
+        >
+            <Cross className="h-2 w-2 mx-auto" />
+        </button>
+    </span>
+  </p>
+);
+
+const SignupForm = ({ title }) => {
+    const [ mutate, { isLoading, isError, error, isSucccess, reset } ] = useMutation(({ email }) => subscribe(email));
+
+    if (isSuccess) {
+        return <SuccessMessage handleReset={reset} />;
+    }
+    ...
+}
+
+```
+
+We get the `reset` from the mutation and pass it to SuccessMessage as `handleReset` prop.
+
+Inside of the **success message** we will add a **button with the cross icon** and fire the `reset` on button click.
