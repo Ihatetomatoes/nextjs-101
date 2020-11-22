@@ -1,4 +1,5 @@
 import useLocalStorage from "@hooks/useLocalStorage";
+import * as gtag from "@lib/gtag";
 import confetti from "canvas-confetti";
 import { useEffect } from "react";
 
@@ -22,7 +23,10 @@ const CourseProgress = ({ units, progress, onComplete }) => {
           origin: { y: 0.4, x: 0.5 },
           shapes: ["circle"],
           disableForReducedMotion: true,
-        }).then(() => setCompleted(true));
+        }).then(() => {
+          setCompleted(true);
+          gtag.event({ action: "course_completed" });
+        });
       }, 1000);
     }
   }, [awardedPts, totalReward]);
