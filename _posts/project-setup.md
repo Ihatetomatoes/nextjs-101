@@ -6,6 +6,7 @@ excerpt: 'Install Next.js and TailwindCSS'
 coverImage: ''
 module: ''
 videoId: ''
+duration: '05:40'
 ---
 
 ## Getting Started with Next.js

@@ -18,8 +18,8 @@ module.exports = {
         facebook: "#3b5998",
         youtube: "#c4302b",
         twitch: "#9146FF",
-        success: "#587e0e",
         completed: "#83B919",
+        success: "#587e0e",
         green: {
           50: "#F7F9F3",
           100: "#EEF2E7",

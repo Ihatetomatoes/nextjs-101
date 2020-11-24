@@ -1,58 +1,13 @@
 ---
-id: "4"
-order: 4
+id: "6"
+order: 6
 title: 'Layout and Hero Components'
 excerpt: 'Create CSS layout using TailwindCSS'
 coverImage: ''
-module: 'Styling with TailwindCSS'
+module: ''
 videoId: ''
+duration: '15:00'
 ---
-
-## What is TailwindCSS
-
-![TailwindCSS - A Utility-first CSS framework](/assets/course/styling/img_tailwind-css.png)
-
-[TailwindCSS](https://tailwindcss.com/) is a utility-first CSS framework. It give you **small building blocks** that you can use to build your designs.
-
-I have been using it for a few months now and really like:
-
-- **no thinking** about naming classes
-- **no switching** between html and css
-- **responsive** media queries syntax
-- **only load css that is used** by your components
-- forces you to **break down your ui** into components
-- your **css does not grow** over time as much
-
-Things that I am still getting to know:
-
-- proper **customisation**
-- referring to the **documentation**
-- some of the **advanced usecases and layouts**
-
-For what we are trying to build in this course, TailwindCSS is perfect.
-
-> If you are not interested in TailwindCSS, you can skip the styling part and dive straight into building the functionality.
-
-## Tools
-
-If you are using VSCode like me, you would want to install [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss), this will give you classes autocompletion and linting.
-
-![Tailwind CSS IntelliSense for VSCode](/assets/course/styling/img_tailwind-vscode.png)
-
-## Body and Full Height
-
-Firstly we will add `bg-gray-100` to the `body`, and stretch the whole app to take the whole viewport height.
-
-```css
-/* /pages/styles/tailwind.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-#__next {
-  @apply flex flex-col min-h-screen;
-}
-```
 
 ## Layout Component
 
@@ -64,7 +19,7 @@ Create a new `Layout` component.
 // components/Layout.js
 const Layout = ({ children }) => {
   return (
-    <div className="mx-auto md:px-4 md:max-w-3xl min-h-screen w-full">
+    <div className="mx-auto md:px-4 md:max-w-3xl min-h-screen">
       {children}
     </div>
   );
@@ -86,7 +41,7 @@ export default function Home() {
   return (
     <Layout>
       ...
-      <main className="bg-white min-h-screen pt-4 md:px-4 md:max-w-6xl">
+      <main className="bg-white p-4">
         <Hero />
       </main>
     </Layout>
@@ -99,8 +54,10 @@ export default function Home() {
 
 Instead of growing the markup of the home component, lets create a new `Hero` component.
 
-```jsx{23}
+```jsx
 // src/components/Hero.js
+import { Tick } from "../../icons";
+
 const outcomes = [
   "How to build this landing page with Next.js",
   "How to create API endpoint and integrate with ConvertKit API",
@@ -115,8 +72,8 @@ const ComingSoonBadge = () => (
 
 const Hero = () => {
   return (
-    <div className="md:flex md:flex-row relative border border-gray-200">
-      <div className="bg-gray-100 text-center md:w-1/3 flex">
+    <div className="border border-gray-200 md:flex md:flex-row">
+      <div className="bg-gray-100 text-center md:w-1/3">
         <img
           className="object-contain mx-auto"
           alt="Next.js 101"
@@ -128,7 +85,12 @@ const Hero = () => {
         {outcomes && (
           <ul className="mb-6">
             {outcomes.map((i) => (
-              <li key={i} className="text-gray-700 list-none flex mb-2 opacity-75">{i}</li>
+              <li key={i} className="text-gray-700 flex mb-2">
+                <span className="self-center mr-2">
+                  <Tick className="h-4" />
+                </span>
+                <span className="opacity-75">{i}</span>
+              </li>
             ))}
           </ul>
         )}
@@ -142,6 +104,14 @@ const Hero = () => {
 export default Hero;
 
 ```
+
+## Icons with SVGR CLI
+
+![SVGR](/assets/course/styling/img_svgr-icons.png)
+
+To import SVG as a React component, I have used [SVGR](https://react-svgr.com/docs/cli/).
+
+It has a nice CLI option to specify a folder with SVG icons and it automatically creates React components for all of them.
 
 ### Images
 

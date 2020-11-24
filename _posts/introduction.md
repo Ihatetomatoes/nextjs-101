@@ -6,6 +6,7 @@ excerpt: 'Why to use Next.js and what we will cover.'
 coverImage: ''
 module: 'Introduction and Setup'
 videoId: ''
+duration: '05:24'
 ---
 
 ## Why Next.js
