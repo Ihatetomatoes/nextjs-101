@@ -5,7 +5,7 @@ title: 'TailwindCSS Introduction'
 excerpt: 'The basic workflow with TailwindCSS'
 coverImage: ''
 module: 'Styling with TailwindCSS'
-videoId: ''
+videoId: '00bt_syumCY'
 duration: '9:10'
 ---
 

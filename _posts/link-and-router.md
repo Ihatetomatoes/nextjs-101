@@ -5,7 +5,7 @@ title: 'Link and Router'
 excerpt: 'How to use Link and Router'
 coverImage: ''
 module: ''
-videoId: ''
+videoId: '8HRL2fIejKg'
 duration: '10:02'
 ---
 

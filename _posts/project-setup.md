@@ -5,7 +5,7 @@ title: 'Project Setup'
 excerpt: 'Install Next.js and TailwindCSS'
 coverImage: ''
 module: ''
-videoId: ''
+videoId: 'Bxg68_p06vY'
 duration: '05:40'
 ---
 
