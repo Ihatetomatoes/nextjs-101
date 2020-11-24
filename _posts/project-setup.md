@@ -5,7 +5,8 @@ title: 'Project Setup'
 excerpt: 'Install Next.js and TailwindCSS'
 coverImage: ''
 module: ''
-videoId: ''
+videoId: 'Bxg68_p06vY'
+duration: '05:40'
 ---
 
 ## Getting Started with Next.js
@@ -61,11 +62,11 @@ We will cover the main [**benefits of TailwindCSS**](/post/layout-and-hero) late
 
 ### 3.1 Install TailwindCSS
 
-To install it follow this official [TailwindCSS with Next.js guide](https://github.com/tailwindlabs/tailwindcss-setup-examples/tree/next-new/examples/tailwindcss-nextjs).
+To install it follow this official [TailwindCSS Installation guide](https://tailwindcss.com/docs/installation).
 
 ```javascript
 // install autoprefixer
-npm install tailwindcss autoprefixer@^9
+npm install tailwindcss postcss autoprefixer
 // generate tailwind config
 npx tailwindcss init -p
 // generate tailwind full config - I will explain later
@@ -150,6 +151,8 @@ And we are done with the setup, you should see a page looking like this:
 
 ![next.js 101 initial setup](/assets/course/introduction/img_final-setup.png)
 
+I have also included some **assets** and **icons** in the starting files.
+
 ## 4. Push everything to GitHub
 
 Now that we have **everything setup locally** we will create a first commit and push it to GitHub.
@@ -168,13 +171,13 @@ We have used **Create Next App** to spin up a **brand new Next.js project**, **r
 
 ## Starting Files
 
-Clone the `start branch` of [this repo](https://github.com/Ihatetomatoes/nextjs-101-dev/), if you want to **follow me step by step** from now on.
+Clone the `start branch` of [this repo](https://github.com/Ihatetomatoes/nextjs-101-convertkit/), if you want to **follow me step by step** from now on.
 
 ```javascript
 // clone the start branch
-git clone -b start --single-branch https://github.com/Ihatetomatoes/nextjs-101-dev.git
+git clone -b start --single-branch https://github.com/Ihatetomatoes/nextjs-101-convertkit.git
 // go to the cloned folder
-cd nextjs-101-dev
+cd nextjs-101-convertkit
 // install dependencies
 npm install
 // start dev server

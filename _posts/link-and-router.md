@@ -1,56 +1,13 @@
 ---
 id: "3"
 order: 3
-title: 'Document Structure and Routing'
-excerpt: 'Review Next.js core components and routing'
+title: 'Link and Router'
+excerpt: 'How to use Link and Router'
 coverImage: ''
 module: ''
-videoId: ''
+videoId: '8HRL2fIejKg'
+duration: '10:02'
 ---
-
-## Document Structure
-
-### App
-
-`_app.js` is a special component that is used to initialize every page. This is a place where you would do **anything that needs to affect all pages**, eg. load a **global stylesheet**.
-
-```jsx
-// /pages/_app.js
-import '../styles/tailwind.css'
-
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
-
-export default MyApp
-```
-
-### Document
-
-`_document.js` forms the overall structure of the **HTML**. If you need need to modify the **html** or **body** tags, `_document.js` is the place to do this.
-
-If you are chasing the perfect Lighthouse score, you will need to add the **lang attribute to the html tag**.
-
-We will also change the page background color here. Set the className for body to `bg-gray-100`.
-
-```jsx
-// /pages/_document_.js
-import Document, { Head, Html, Main, NextScript } from "next/document";
-
-export default class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en">
-        <Head />
-        <body className="bg-gray-100">
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
-}
-```
 
 ## File System Routing
 
