@@ -5,7 +5,7 @@ title: 'Subscribe Form Component'
 excerpt: 'Conditional classes with classnames'
 coverImage: ''
 module: ''
-videoId: ''
+videoId: 'N-WMz--zMRA'
 duration: '12:56'
 ---
 
