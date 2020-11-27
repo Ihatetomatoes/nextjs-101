@@ -16,11 +16,12 @@ module.exports = {
   ogImage:
     "https://ihatetomatoes-nextjs-101.vercel.app/assets/img_og-next-101.jpg",
   social: {
+    website: "https://ihatetomatoes.net",
     twitter: "https://twitter.com/ihatetomatoes",
     facebook: "https://www.facebook.com/ihatetomatoesblog",
     twitch: "https://twitch.tv/iht_blog/",
     youtube:
       "https://www.youtube.com/channel/UC7O6CntQoAI-wYyJxYiqNUg?sub_confirmation=1",
   },
-  videoType: "youtube"
+  videoType: "youtube",
 };
