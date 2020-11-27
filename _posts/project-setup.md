@@ -64,6 +64,8 @@ We will cover the main [**benefits of TailwindCSS**](/post/layout-and-hero) late
 
 To install it follow this official [TailwindCSS Installation guide](https://tailwindcss.com/docs/installation).
 
+Here is a more specific guide on [setting up TailwindCSS with Next.js](https://tailwindcss.com/docs/guides/nextjs).
+
 ```javascript
 // install autoprefixer
 npm install tailwindcss postcss autoprefixer
