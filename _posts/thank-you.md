@@ -31,7 +31,7 @@ Thank you, you are awesome!
 - [James Q Quick](https://www.youtube.com/c/JamesQQuick) on YouTube
 - [Leigh Halliday](https://www.youtube.com/c/leighhalliday/) on YouTube
 
-Feel free to submit PR with other useful learning resources.
+Feel free to [submit PR](https://github.com/Ihatetomatoes/nextjs-101) with other useful learning resources.
 
 ## For content creators
 
