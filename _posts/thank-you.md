@@ -4,8 +4,8 @@ order: 14
 title: 'Final Words'
 excerpt: 'Next steps and other learning resources.'
 coverImage: ''
-module: ''
-videoId: ''
+module: 'Next Steps'
+videoId: 'HZGs5htTEYY'
 duration: '14:07'
 ---
 
@@ -32,3 +32,9 @@ Thank you, you are awesome!
 - [Leigh Halliday](https://www.youtube.com/c/leighhalliday/) on YouTube
 
 Feel free to submit PR with other useful learning resources.
+
+## For content creators
+
+If you are a content creator, feel free to [use this app](https://github.com/Ihatetomatoes/nextjs-101) to create courses for your audience.
+
+If you have any questions how to use it, get in touch.

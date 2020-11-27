@@ -5,7 +5,7 @@ title: 'React Query - Mutation'
 excerpt: 'Manage isLoading, isError and isSuccess'
 coverImage: ''
 module: ''
-videoId: ''
+videoId: 'htvitBYmiAA'
 duration: '14:07'
 ---
 
