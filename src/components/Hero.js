@@ -2,7 +2,6 @@ import { coverImage, outcomes, siteName } from "@config";
 import { Tick } from "@icons/index";
 import Link from "next/link";
 import React from "react";
-import { SignupForm } from ".";
 
 const StartBtn = () => (
   <Link href="/post/introduction">
@@ -42,8 +41,7 @@ const Hero = () => {
             ))}
           </ul>
         )}
-        <ComingSoonBadge />
-        <SignupForm title="Leave your email below, to be notified when this course is ready." />
+        <StartBtn />
       </div>
     </div>
   );

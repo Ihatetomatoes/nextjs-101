@@ -1,18 +1,54 @@
-# Next.js site with TailwindCSS and MDX
+# Next.js 101 - mini course app
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is Next.js app that has been used to create the [Next.js 101](https://ihatetomatoes-nextjs-101.vercel.app/).
+
+Feel free to use it if you want to create a simple free course for your audience.
+
+## Templates
+
+### Coming Soon
+
+![Coming Soon](/public/assets/img_coming-soon-screen.png)
+
+### Creator Bio
+
+![Creator Bio](/public/assets/img_creator-details.png)
+
+### Get Started
+
+![Get Started](/public/assets/img_get-started-screen.png)
+
+### Unit detail view
+
+![Unit Detail](/public/assets/img_unit-detail.png)
+
+### Course navigation
+
+![Course Navigation](/public/assets/img_course-navigation.png)
+
+### Celebration
+
+![Celebration](/public/assets/img_celebration.png)
+
+## How to use it
+
+- Add files for each unit in the `_posts` folder
+- Specify `module` **only in the first unit** of each module
+- Include `videoId` or leave empty
+- Update site.config.js with your own details
+- Set video type `youtube` or `vimeo` and include `id` for each video
+- Have fun :)
 
 ## What's included
 
 - Next.js - the core
 - TailwindCSS - styling
-- MDX - markdown files as data source
+- Markdown files as data source
 
 ## Ideal image sizes
 
 - Course cover image - `417 × 464`
 - Unit cover image - `837 × 305`
-
 
 ## Getting Started
 

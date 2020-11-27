@@ -16,7 +16,7 @@ const Unit = ({ unit, index, isCompleted }) => {
           href={`post/${slug}`}
         >
           <span className="flex">
-            <span className="opacity-75 text-gray-200 text-4xl text-right w-12 self-center">
+            <span className="opacity-75 text-gray-200 text-4xl text-right w-12 self-center flex-shrink-0">
               {index + 1}
             </span>
             <span className="self-center pl-4">
