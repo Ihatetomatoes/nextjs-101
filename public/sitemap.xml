@@ -1,0 +1,66 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/app-and-document</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/convertkit-api-variables</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/customising-colors-tailwindcss</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/introduction</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/layout-and-hero</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/link-and-router</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/nextjs-react-hook-form</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/project-setup</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/react-query-mutation</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/subscribe-api-endpoint</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/subscribe-api-part-2</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/subscribe-form-styles</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/tailwindcss-intro</loc>
+    </url>
+            
+    <url>
+        <loc>https://ihatetomatoes-nextjs-101.vercel.app/post/thank-you</loc>
+    </url>
+            
+</urlset>
+  
