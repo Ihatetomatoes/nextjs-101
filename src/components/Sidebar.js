@@ -1,3 +1,4 @@
+import { FeedbackFish } from "@feedback-fish/react";
 import classNames from "classnames";
 import Link from "next/link";
 import { withRouter } from "next/router";
@@ -43,6 +44,14 @@ const Sidebar = ({ units, router: { query }, progress, isSticky }) => {
     <div className="col-span-3 relative">
       <div className={sidebarClass}>
         <div className="py-4">
+          <FeedbackFish projectId="4a0797d18b26fe">
+            <button
+              className="bold py-2 px-4 mb-4 w-full inline-block text-center bg-gray-200 hover:bg-red-500 transition-colors duration-200 text-white rounded-sm"
+              title="Leave a short review, question or feedback. Thank you!"
+            >
+              Give me feedback
+            </button>
+          </FeedbackFish>
           <CourseProgress
             units={units}
             progress={progress}
