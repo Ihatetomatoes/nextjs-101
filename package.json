@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@feedback-fish/react": "^1.2.1",
     "@mdx-js/react": "^1.6.21",
     "@tailwindcss/typography": "^0.2.0",
     "autoprefixer": "^10.0.2",
