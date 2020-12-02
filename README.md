@@ -39,6 +39,14 @@ Feel free to use it if you want to create a simple free course for your audience
 - Set video type `youtube` or `vimeo` and include `id` for each video
 - Have fun :)
 
+## Feedback Fish
+
+If you want to use the "Give me feedback" button in the sidebar you will need to add `NEXT_PUBLIC_FEEDBACK_FISH_ID` to the [environment variables](https://vercel.com/blog/environment-variables-ui). For example
+
+```text
+NEXT_PUBLIC_FEEDBACK_FISH_ID=abcdefghijk
+```
+
 ## What's included
 
 - Next.js - the core
