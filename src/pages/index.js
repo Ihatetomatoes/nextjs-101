@@ -36,7 +36,7 @@ export default function Home({ allPosts }) {
           key="description"
         />
       </Head>
-      <main className="bg-white p-4 sm:p-8 min-h-full col-span-8 col-start-2">
+      <main className="bg-white p-4 sm:p-8 min-h-full col-span-9">
         <Header />
         <Hero />
         {allPosts && (
