@@ -19,6 +19,7 @@ const SocialLink = ({ type }) => {
     [`hover:bg-twitter`]: type === "twitter",
     [`hover:bg-twitch`]: type === "twitch",
     [`hover:bg-youtube`]: type === "youtube",
+    [`hover:bg-green-500`]: type === "website",
   });
   return (
     <li className="sm:w-auto text-center m-0 self-center">
@@ -38,11 +39,9 @@ const SocialLink = ({ type }) => {
 const SocialIcons = () => (
   <div className="sm:ml-auto w-full mt-2">
     <ul className="flex m-0">
-      <SocialLink type="website" />
-      <SocialLink type="twitter" />
-      <SocialLink type="facebook" />
-      <SocialLink type="youtube" />
-      <SocialLink type="twitch" />
+      {Object.keys(social).map((type) => (
+        <SocialLink key={type} type={type} />
+      ))}
     </ul>
   </div>
 );
