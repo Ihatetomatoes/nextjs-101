@@ -4,7 +4,7 @@ order: 6
 title: 'Layout and Hero Components'
 excerpt: 'Create CSS layout using TailwindCSS'
 coverImage: ''
-module: ''
+module: 'Styling with TailwindCSS'
 videoId: 'gEBPVwTvEv8'
 duration: '15:00'
 ---

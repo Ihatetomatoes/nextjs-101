@@ -4,7 +4,7 @@ order: 8
 title: 'Subscribe Form Component'
 excerpt: 'Conditional classes with classnames'
 coverImage: ''
-module: ''
+module: 'Styling with TailwindCSS'
 videoId: 'N-WMz--zMRA'
 duration: '12:56'
 ---

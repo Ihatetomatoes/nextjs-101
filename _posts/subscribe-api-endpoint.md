@@ -4,7 +4,7 @@ order: 11
 title: 'Subscribe API endpoint'
 excerpt: 'Creating API route, response helpers'
 coverImage: ''
-module: ''
+module: 'Form Submission'
 videoId: 'KogQXMaP_9A'
 duration: '06:49'
 ---

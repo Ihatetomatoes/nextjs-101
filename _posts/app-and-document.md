@@ -4,7 +4,7 @@ order: 4
 title: 'App and Document'
 excerpt: 'How to control HTML of everypage.'
 coverImage: ''
-module: ''
+module: 'Introduction and Setup'
 videoId: 'q03RmfjpV8M'
 duration: '04:05'
 ---

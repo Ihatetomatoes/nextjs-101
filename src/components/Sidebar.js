@@ -2,7 +2,7 @@ import { FeedbackFish } from "@feedback-fish/react";
 import classNames from "classnames";
 import Link from "next/link";
 import React from "react";
-import { CourseProgress, ResetProgressBtn, UnitsList } from "./";
+import { CourseProgress, Modules, ResetProgressBtn } from "./";
 
 const Sidebar = ({ units, progress, isSticky }) => {
   const sidebarClass = classNames({
@@ -27,7 +27,7 @@ const Sidebar = ({ units, progress, isSticky }) => {
           className="hidden md:block"
         />
         <div className="md:p-0">
-          {units && <UnitsList units={units} progress={progress} />}
+          <Modules units={units} progress={progress} />
           <Link href="/">
             <a className="bold py-2 px-4 w-full inline-block text-center bg-gray-200 hover:bg-red-500 transition-colors duration-200 mt-4 text-white rounded-sm">
               ← Back to Overview

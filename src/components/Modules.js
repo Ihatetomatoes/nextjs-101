@@ -1,3 +1,4 @@
+import { groupBy } from "@utils/utils";
 import classNames from "classnames";
 import Link from "next/link";
 import { withRouter } from "next/router";
@@ -33,30 +34,33 @@ const UnitItem = ({ unit: { slug, title, duration }, progress, query }) => {
   );
 };
 
-const ModuleItem = ({ module }) => <li className="font-bold py-2">{module}</li>;
+const ModuleItem = ({ module }) => <h3 className="font-bold py-2">{module}</h3>;
 
-const UnitsList = ({ units, router: { query }, progress }) => {
+const Modules = ({ units = [], router: { query }, progress }) => {
+  const modules = groupBy(units, "module");
   return (
-    <ul>
-      {units.map((unit) => {
-        const item = unit.module ? (
-          <React.Fragment key={unit.slug}>
-            <ModuleItem module={unit.module} />
-            <UnitItem unit={unit} query={query} progress={progress} />
-          </React.Fragment>
-        ) : (
-          <UnitItem
-            key={unit.slug}
-            unit={unit}
-            query={query}
-            progress={progress}
-          />
+    <div>
+      {modules.map(({ name, units }) => {
+        return (
+          <div key={name}>
+            <ModuleItem module={name} />
+            {units && (
+              <ul>
+                {units.map((unit) => (
+                  <UnitItem
+                    key={unit.slug}
+                    unit={unit}
+                    query={query}
+                    progress={progress}
+                  />
+                ))}
+              </ul>
+            )}
+          </div>
         );
-
-        return item;
       })}
-    </ul>
+    </div>
   );
 };
 
-export default withRouter(UnitsList);
+export default withRouter(Modules);

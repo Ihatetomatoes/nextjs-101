@@ -4,7 +4,7 @@ order: 13
 title: 'React Query - Mutation'
 excerpt: 'Manage isLoading, isError and isSuccess'
 coverImage: ''
-module: ''
+module: 'Form Submission'
 videoId: 'htvitBYmiAA'
 duration: '14:07'
 ---
