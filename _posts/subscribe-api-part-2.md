@@ -4,7 +4,7 @@ order: 12
 title: 'Subscribe API - Part 2'
 excerpt: 'Send request to ConvertKit'
 coverImage: ''
-module: ''
+module: 'Form Submission'
 videoId: 'ZhPcgl8DK1E'
 duration: '09:35'
 ---

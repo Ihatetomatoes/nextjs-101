@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import React from "react";
 
 const UnitProgress = dynamic(() => import("./UnitProgress"), {
   ssr: false,

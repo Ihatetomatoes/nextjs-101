@@ -4,7 +4,7 @@ order: 7
 title: 'Customising Colors in TailwindCSS'
 excerpt: 'How to create your own color palette'
 coverImage: ''
-module: ''
+module: 'Styling with TailwindCSS'
 videoId: 'YLLLkyU32qE'
 duration: '05:57'
 ---

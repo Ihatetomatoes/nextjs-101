@@ -4,7 +4,7 @@ order: 10
 title: 'ConvertKit API details'
 excerpt: 'Valildating ConvertKit API with Postman'
 coverImage: ''
-module: ''
+module: 'Form Submission'
 videoId: 'MwZY49--Dt0'
 duration: '05:48'
 ---

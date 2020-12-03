@@ -4,7 +4,7 @@ order: 3
 title: 'Link and Router'
 excerpt: 'How to use Link and Router'
 coverImage: ''
-module: ''
+module: 'Introduction and Setup'
 videoId: '8HRL2fIejKg'
 duration: '10:02'
 ---

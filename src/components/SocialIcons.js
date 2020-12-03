@@ -1,9 +1,10 @@
 import { social } from "@config";
-import { Facebook, Twitch, Twitter, YouTube } from "@icons/index";
+import { Facebook, Link, Twitch, Twitter, YouTube } from "@icons/index";
 import classNames from "classnames";
 import React from "react";
 
 const Icons = {
+  website: <Link />,
   facebook: <Facebook />,
   twitter: <Twitter />,
   youtube: <YouTube />,
@@ -13,6 +14,7 @@ const Icons = {
 const SocialLink = ({ type }) => {
   const btnClass = classNames({
     [`flex text-center text-gray-300 p-2 transition-colors duration-300 hover:text-white fill-current`]: true,
+    [`hover:bg-red-500`]: type === "website",
     [`hover:bg-facebook`]: type === "facebook",
     [`hover:bg-twitter`]: type === "twitter",
     [`hover:bg-twitch`]: type === "twitch",
@@ -36,6 +38,7 @@ const SocialLink = ({ type }) => {
 const SocialIcons = () => (
   <div className="sm:ml-auto w-full mt-2">
     <ul className="flex m-0">
+      <SocialLink type="website" />
       <SocialLink type="twitter" />
       <SocialLink type="facebook" />
       <SocialLink type="youtube" />

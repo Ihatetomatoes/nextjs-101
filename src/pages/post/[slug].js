@@ -20,7 +20,7 @@ const Sidebar = dynamic(() => import("@components/Sidebar"), {
   ssr: false,
 });
 
-const Unit = ({ unit, allUnits, router }) => {
+const Unit = ({ unit, allUnits = [], router }) => {
   const { query: slug } = router;
 
   const [progress, setProgress] = useLocalStorage("progress", []);
