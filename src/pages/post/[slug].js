@@ -60,7 +60,7 @@ const Unit = ({ unit, allUnits, router }) => {
           key="description"
         />
       </Head>
-      <main className="bg-white p-4 mb-4 md:p-8 border-gray-200 min-h-full col-span-8 col-start-2">
+      <main className="bg-white p-4 mb-4 md:p-8 border-gray-200 min-h-full col-span-9">
         <Header />
         <UnitCard unit={unit} />
         {unit.videoId && <UnitVideo type={videoType} videoId={unit.videoId} />}
@@ -76,7 +76,9 @@ const Unit = ({ unit, allUnits, router }) => {
         />
         <Author />
       </main>
-      <Sidebar isSticky units={allUnits} progress={progress} />
+      <div className="col-span-3 relative">
+        <Sidebar isSticky units={allUnits} progress={progress} />
+      </div>
     </Layout>
   );
 };
@@ -97,7 +99,13 @@ export async function getStaticProps({ params }) {
   ]);
   const content = await markdownToHtml(unit.content || "");
 
-  const allUnits = getAllPosts(["title", "order", "slug", "module"]);
+  const allUnits = getAllPosts([
+    "title",
+    "order",
+    "slug",
+    "module",
+    "duration",
+  ]);
 
   return {
     props: {

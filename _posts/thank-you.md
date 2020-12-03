@@ -6,7 +6,7 @@ excerpt: 'Next steps and other learning resources.'
 coverImage: ''
 module: 'Next Steps'
 videoId: 'HZGs5htTEYY'
-duration: '14:07'
+duration: '2:24'
 ---
 
 ## Feedback
