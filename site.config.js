@@ -24,4 +24,5 @@ module.exports = {
       "https://www.youtube.com/channel/UC7O6CntQoAI-wYyJxYiqNUg?sub_confirmation=1",
   },
   videoType: "youtube",
+  websiteUrl: "https://ihatetomatoes-nextjs-101.vercel.app/",
 };

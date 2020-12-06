@@ -12,8 +12,8 @@ const Author = () => {
             className="object-contain mx-auto"
             src={authorImg}
             width={382}
+            alt={author}
             height={382}
-            alt="Petr Tichy"
           />
         </a>
       </div>
