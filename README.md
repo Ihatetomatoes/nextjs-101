@@ -33,18 +33,37 @@ Feel free to use it if you want to create a simple free course for your audience
 ## How to use it
 
 - Add files for each unit in the `_posts` folder
-- Specify `module` **only in the first unit** of each module
+- Specify `module` of each module
+  - Units will be grouped by module in the sidebar
 - Include `videoId` or leave empty
-- Update site.config.js with your own details
+- Update `site.config.js` with your own details
 - Set video type `youtube` or `vimeo` and include `id` for each video
 - Have fun :)
 
-## Feedback Fish
+## Feedback Fish API
 
 If you want to use the "Give me feedback" button in the sidebar you will need to add `NEXT_PUBLIC_FEEDBACK_FISH_ID` to the [environment variables](https://vercel.com/blog/environment-variables-ui). For example
 
 ```text
 NEXT_PUBLIC_FEEDBACK_FISH_ID=abcdefghijk
+```
+
+## ConvertKit API
+
+If you want the subscribe form to be integrated with ConvertKit add the following environment variables.
+
+```text
+CONVERTKIT_API_URL=https://api.convertkit.com/v3/
+CONVERTKIT_API_KEY=YOUR_API_KEY
+CONVERTKIT_FORM_ID=YOUR_CONVERTKIT_FORM_ID
+```
+
+## Google Analytics API
+
+If you want track visits for your course add your GA ID to the environment variables.
+
+```text
+GA_TRACKING_ID=YOUR_GA_ID
 ```
 
 ## What's included
