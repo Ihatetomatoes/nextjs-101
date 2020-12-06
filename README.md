@@ -33,7 +33,7 @@ Feel free to use it if you want to create a simple free course for your audience
 ## How to use it
 
 - Add files for each unit in the `_posts` folder
-- Specify `module` of each module
+- Specify `module` of each unit
   - Units will be grouped by module in the sidebar
 - Include `videoId` or leave empty
 - Update `site.config.js` with your own details
