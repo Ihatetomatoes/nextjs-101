@@ -1,10 +1,17 @@
-import { Author, Header, Hero, Layout, Module, Unit } from "@components/index";
-import { author, ogImage, siteDescription, siteName } from "@config";
+import React from "react";
+import {
+  Author,
+  Header,
+  Hero,
+  Layout,
+  Module,
+  Unit,
+  PageHead,
+} from "@components/index";
+import { author, siteName } from "@config";
 import useLocalStorage from "@hooks/useLocalStorage";
 import { getAllPosts } from "@lib/api";
 import { groupBy } from "@utils/utils";
-import Head from "next/head";
-import React from "react";
 
 export default function Home({ allPosts }) {
   const [progress] = useLocalStorage("progress", []);
@@ -13,32 +20,7 @@ export default function Home({ allPosts }) {
 
   return (
     <Layout>
-      <Head>
-        <title>{`${siteName} by ${author}`}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content={siteDescription}
-          key="descriptionMeta"
-        />
-        <meta
-          property="og:url"
-          content="https://ihatetomatoes-nextjs-101.vercel.app/"
-          key="url"
-        />
-        <meta property="og:type" content="website" key="website" />
-        <meta
-          property="og:title"
-          content={`${siteName} by ${author}`}
-          key="title"
-        />
-        <meta property="og:image" content={ogImage} key="image" />
-        <meta
-          property="og:description"
-          content={siteDescription}
-          key="description"
-        />
-      </Head>
+      <PageHead title={`${siteName} by ${author}`} />
       <main className="bg-white p-4 sm:p-8 min-h-full col-span-9">
         <Header />
         <Hero />

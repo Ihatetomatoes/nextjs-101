@@ -1,20 +1,22 @@
+import React from "react";
+import { useEffect } from "react";
+import { withRouter } from "next/router";
+import dynamic from "next/dynamic";
+import markdownToHtml from "@lib/markdownToHtml";
 import {
   Author,
   Header,
   Layout,
   Navigation,
+  PageHead,
   SignupForm,
   UnitCard,
   UnitVideo,
 } from "@components/index";
-import { author, ogImage, siteDescription, siteName, videoType } from "@config";
+import { videoType } from "@config";
 import useLocalStorage from "@hooks/useLocalStorage";
 import { getAllPosts, getPostBySlug } from "@lib/api";
-import markdownToHtml from "@lib/markdownToHtml";
-import dynamic from "next/dynamic";
-import Head from "next/head";
-import { withRouter } from "next/router";
-import { useEffect } from "react";
+import { siteName } from "@config";
 
 const Sidebar = dynamic(() => import("@components/Sidebar"), {
   ssr: false,
@@ -34,32 +36,7 @@ const Unit = ({ unit, allUnits = [], router }) => {
 
   return (
     <Layout>
-      <Head>
-        <title>{`${unit.title} - ${siteName}`}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content={siteDescription}
-          key="descriptionMeta"
-        />
-        <meta
-          property="og:url"
-          content="https://ihatetomatoes-nextjs-101.vercel.app/"
-          key="url"
-        />
-        <meta property="og:type" content="website" key="website" />
-        <meta
-          property="og:title"
-          content={`${siteName} by ${author}`}
-          key="title"
-        />
-        <meta property="og:image" content={ogImage} key="image" />
-        <meta
-          property="og:description"
-          content={siteDescription}
-          key="description"
-        />
-      </Head>
+      <PageHead title={`${unit.title} - ${siteName}`} />
       <main className="bg-white p-4 mb-4 md:p-8 border-gray-200 min-h-full col-span-9">
         <Header />
         <UnitCard unit={unit} />
