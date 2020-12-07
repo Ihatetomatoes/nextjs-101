@@ -1,13 +1,14 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import React from "react";
+import { Pill } from "./";
 
 const UnitProgress = dynamic(() => import("./UnitProgress"), {
   ssr: false,
 });
 
 const Unit = ({ unit, index, isCompleted }) => {
-  const { slug, title, excerpt } = unit;
+  const { slug, title, excerpt, duration } = unit;
 
   return (
     <li className="border border-gray-200 border-t-0 relative z-10">
@@ -21,7 +22,8 @@ const Unit = ({ unit, index, isCompleted }) => {
               {index + 1}
             </span>
             <span className="self-center pl-4">
-              <strong className="text-gray-400">{title}</strong>
+              <strong className="text-gray-400">{title}</strong>{" "}
+              <Pill text={duration} className="bg-green-100" />
               <br />
               <span className="text-sm text-gray-400 opacity-75">
                 {excerpt}

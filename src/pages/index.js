@@ -1,17 +1,17 @@
-import React from "react";
 import {
   Author,
   Header,
   Hero,
   Layout,
   Module,
-  Unit,
   PageHead,
+  Unit,
 } from "@components/index";
 import { author, siteName } from "@config";
 import useLocalStorage from "@hooks/useLocalStorage";
 import { getAllPosts } from "@lib/api";
 import { groupBy } from "@utils/utils";
+import React from "react";
 
 export default function Home({ allPosts }) {
   const [progress] = useLocalStorage("progress", []);
@@ -65,6 +65,7 @@ export async function getStaticProps() {
     "order",
     "coverImage",
     "excerpt",
+    "duration",
   ]);
 
   return {
