@@ -9,6 +9,10 @@ videoId: 'htvitBYmiAA'
 duration: '14:07'
 ---
 
+### React Query 3 - Breaking Changes
+
+**React Query 3** will require 2 small changes to our code, [add QueryClient and destructure mutate from an object](#react-query-3---fix) to make everything work.
+
 ## The UI Issues
 
 The **subscribe process works, but the UI** is not really user friendly.
@@ -155,3 +159,59 @@ const SignupForm = ({ title }) => {
 We get the `reset` from the mutation and pass it to SuccessMessage as `handleReset` prop.
 
 Inside of the **success message** we will add a **button with the cross icon** and fire the `reset` on button click.
+
+## React Query 3 - Fix
+
+React Query 3 has been released since I have recorded this video. Here are the step necessary to make our code work.
+
+### 1. Add QueryClient
+
+![React Query 3](/assets/course/react-query/img_react-query-3.png)
+
+```jsx{2,6,11,13}
+// _app.js
+import { QueryClient, QueryClientProvider } from "react-query";
+import "../styles/tailwind.css";
+
+// Create a client
+const queryClient = new QueryClient();
+
+function MyApp({ Component, pageProps }) {
+  return (
+    // Provide the client to your App
+    <QueryClientProvider client={queryClient}>
+      <Component {...pageProps} />
+    </QueryClientProvider>
+  );
+}
+
+export default MyApp;
+```
+
+### 2. Update useMutation
+
+![React Query mutation object](/assets/course/react-query/img_react-query-mutation-object.png)
+
+The `useMutation` hook now returns an object instead of an `array`.
+
+```jsx{5-12}
+// SignupForm.js
+const SignupForm = ({ title }) => {
+    ...
+
+    const {
+        mutate,
+        isSuccess,
+        isLoading,
+        isError,
+        error,
+        reset,
+    } = useMutation((data) => subscribe(data));
+
+    ...
+    return (...)
+}
+```
+
+And that is it, after making these two changes our form mutation works fine again.
+
