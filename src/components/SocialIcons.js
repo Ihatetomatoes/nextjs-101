@@ -1,5 +1,5 @@
 import { social } from "@config";
-import { Facebook, Link, Twitch, Twitter, YouTube } from "@icons/index";
+import { Facebook, Link, Twitch, Twitter, Youtube } from "@icons/index";
 import classNames from "classnames";
 import React from "react";
 
@@ -7,7 +7,7 @@ const Icons = {
   website: <Link />,
   facebook: <Facebook />,
   twitter: <Twitter />,
-  youtube: <YouTube />,
+  youtube: <Youtube />,
   twitch: <Twitch />,
 };
 
