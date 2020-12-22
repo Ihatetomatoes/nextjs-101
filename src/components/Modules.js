@@ -1,3 +1,4 @@
+import { Less, More } from "@icons/index";
 import { groupBy } from "@utils/utils";
 import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
@@ -17,7 +18,7 @@ const ProgressMarker = ({ isCompleted }) => {
 const UnitItem = ({ unit: { slug, title, duration }, progress, query }) => {
   const isCompleted = progress.find((item) => item.path === slug);
   const linkClass = classNames({
-    "p-1 px-2 flex place-self-stretch rounded-md": true,
+    "p-1 px-2 flex place-self-stretch rounded-md hover:bg-green-100 focus:outline-none focus:ring-2 ring-inset ring-blue-500": true,
     "bg-green-100": slug === query.slug,
   });
 
@@ -45,9 +46,15 @@ const ModuleItem = ({ module, units, query, progress }) => {
 
   return (
     <div>
-      <h3 className="font-bold p-2" onClick={toggleOpen}>
-        {module}
-      </h3>
+      <button
+        className="font-bold p-2 cursor-pointer w-full text-left hover:bg-blue-100 rounded-md focus:outline-none focus:ring-2 ring-inset ring-blue-500 flex"
+        onClick={toggleOpen}
+      >
+        <span>{module}</span>
+        <span className="w-4 h-4 inline-block ml-auto self-center">
+          {isOpen ? <Less /> : <More />}
+        </span>
+      </button>
       <AnimatePresence>
         {isOpen && units && (
           <motion.div
